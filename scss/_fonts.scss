@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'burtons_nightmareregular';
+    src: url('nitemare-webfont.woff2') format('woff2'),
+         url('nitemare-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.h1, .h2, .h3 {
+    font-family: 'burtons_nightmareregular' !important;
+}

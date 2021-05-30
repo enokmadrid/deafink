@@ -8,10 +8,24 @@
     Instead, you may add your own custom styles in the 
     "assets/custom.css.liquid" file.
 */
+@font-face {
+  font-family: "burtons_nightmareregular";
+  src: url("nitemare-webfont.woff2") format("woff2"), url("nitemare-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.h1, .h2, .h3 {
+  font-family: "burtons_nightmareregular" !important;
+}
+
 /* 
     © 2021 KondaSoft
     https://www.kondasoft.com
 */
+h1, .h1 {
+  font-size: calc(4.25rem + 7.5vw) !important;
+}
+
 /*!
  * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -94,29 +108,24 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
-}
-@media (min-width: 1200px) {
-  h1, .h1 {
-    font-size: 2.5rem;
-  }
+  font-size: calc(4.25rem + 7.5vw);
 }
 
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(1.5625rem + 3.75vw);
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2rem;
+    font-size: 4.375rem;
   }
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1.4375rem + 2.25vw);
 }
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 1.75rem;
+    font-size: 3.125rem;
   }
 }
 
@@ -4325,7 +4334,7 @@ textarea.form-control-lg {
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 1px solid transparent !important;
   border-radius: 0.25rem;
   transition: box-shadow 0.15s ease-in-out;
 }
@@ -8217,15 +8226,15 @@ textarea.form-control-lg {
 }
 
 .fs-1 {
-  font-size: calc(1.375rem + 1.5vw) !important;
+  font-size: calc(4.25rem + 7.5vw) !important;
 }
 
 .fs-2 {
-  font-size: calc(1.325rem + 0.9vw) !important;
+  font-size: calc(1.5625rem + 3.75vw) !important;
 }
 
 .fs-3 {
-  font-size: calc(1.3rem + 0.6vw) !important;
+  font-size: calc(1.4375rem + 2.25vw) !important;
 }
 
 .fs-4 {
@@ -15815,64 +15824,48 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 1200px) {
-  .fs-1 {
-    font-size: 2.5rem !important;
-  }
-
   .fs-2 {
-    font-size: 2rem !important;
+    font-size: 4.375rem !important;
   }
 
   .fs-3 {
-    font-size: 1.75rem !important;
+    font-size: 3.125rem !important;
   }
 
   .fs-4 {
     font-size: 1.5rem !important;
   }
 
-  .fs-sm-1 {
-    font-size: 2.5rem !important;
-  }
-
   .fs-sm-2 {
-    font-size: 2rem !important;
+    font-size: 4.375rem !important;
   }
 
   .fs-sm-3 {
-    font-size: 1.75rem !important;
+    font-size: 3.125rem !important;
   }
 
   .fs-sm-4 {
     font-size: 1.5rem !important;
   }
 
-  .fs-md-1 {
-    font-size: 2.5rem !important;
-  }
-
   .fs-md-2 {
-    font-size: 2rem !important;
+    font-size: 4.375rem !important;
   }
 
   .fs-md-3 {
-    font-size: 1.75rem !important;
+    font-size: 3.125rem !important;
   }
 
   .fs-md-4 {
     font-size: 1.5rem !important;
   }
 
-  .fs-lg-1 {
-    font-size: 2.5rem !important;
-  }
-
   .fs-lg-2 {
-    font-size: 2rem !important;
+    font-size: 4.375rem !important;
   }
 
   .fs-lg-3 {
-    font-size: 1.75rem !important;
+    font-size: 3.125rem !important;
   }
 
   .fs-lg-4 {
