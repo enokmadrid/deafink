@@ -1,26 +1,30 @@
 {
   "current": {
-    "color_primary": "#0d6efd",
-    "color_secondary": "#6c757d",
-    "color_price": "#28a745",
-    "color_badge_sale": "#dc3545",
+    "color_primary": "#21eaf4",
+    "color_secondary": "#4f0d96",
+    "color_dark": "#21064e",
+    "color_light": "#ffffff",
+    "color_body_bg": "#000000",
+    "color_body_text": "#ffffff",
+    "color_price": "#21eaf4",
+    "color_badge_sold_out": "#1499ed",
+    "color_badge_sale": "#4f0d96",
+    "font_headings": "open_sans_n4",
     "minicart_img_width": "75",
     "minicart_img_height": "75",
-    "font_headings": "sans-serif",
     "minicart_style": "",
     "sections": {
       "navbar": {
         "type": "navbar",
         "settings": {
           "container": true,
-          "bg_color": "#ffffff",
-          "background_style": "navbar-light",
-          "shadow": "shadow-sm",
+          "bg_color": "#000000",
+          "background_style": "navbar-dark",
+          "shadow": "shadow",
           "sticky": true,
-          "logo": "shopify:\/\/shop_images\/logo.png",
           "logo_height": "30",
           "menu": "main-menu",
-          "menu_position": "mx-auto",
+          "menu_position": "ms-auto",
           "show_search": true,
           "show_account": true,
           "cart_badge_color": "#0d6efd",
@@ -30,10 +34,10 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "announcement": "<p>Announce something important here<\/p>",
-          "show": true,
+          "announcement": "",
+          "show": false,
           "homepage_only": true,
-          "bg_color": "#343a40",
+          "bg_color": "#590aa0",
           "text_color": "text-white"
         }
       },
@@ -43,32 +47,21 @@
           "16124340768622aa4c-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/lifestyle-1.jpg",
-              "title": "Welcome to KS BootShop",
-              "title_size": "h3",
-              "description": "<p>Free Shopify Theme powered by Bootstrap v5 framework<\/p>"
-            }
-          },
-          "16124340768622aa4c-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/lifestyle-2.jpg",
-              "title": "Modern, Fast and Simple",
-              "title_size": "h3",
-              "description": "<p>Free Shopify Theme powered by Bootstrap v5 framework<\/p>"
+              "title": "Deafink Tattoos",
+              "title_size": "h1",
+              "description": "<p>Tattoo art, fine-art painitng, sculptures, and portfolio of Gayle Sanchez.<\/p>"
             }
           }
         },
         "block_order": [
-          "16124340768622aa4c-0",
-          "16124340768622aa4c-1"
+          "16124340768622aa4c-0"
         ],
         "settings": {
           "container": false,
-          "controls": true,
-          "indicators": true,
+          "controls": false,
+          "indicators": false,
           "style": "",
-          "transition": "slide",
+          "transition": "slide carousel-fade",
           "interval": 6,
           "img_width": "1920",
           "img_height": "640",
@@ -81,7 +74,7 @@
         "type": "featured-collection",
         "settings": {
           "collection": "men",
-          "heading": "Featured collection",
+          "heading": "Featured Products",
           "subheading": "<p>Write something catchy for this section.<\/p>",
           "limit": 6,
           "container": true,
@@ -94,7 +87,7 @@
           "view_all_btn_size": "",
           "img_width": "480",
           "img_height": "480",
-          "img_thumbnail": true,
+          "img_thumbnail": false,
           "show_vendor": false,
           "show_description": false,
           "description_length": "70",
@@ -105,11 +98,11 @@
           "row_sm": 2,
           "row_md": 3,
           "row_lg": 3,
-          "row_xl": 3,
+          "row_xl": 4,
           "row_xxl": 6,
           "gutter_mobile": 3,
           "gutter_tablet": 3,
-          "gutter_desktop": 4,
+          "gutter_desktop": 2,
           "padding_top": 0,
           "padding_bottom": 0,
           "margin_top": 0,
@@ -119,51 +112,37 @@
       "161281990869fdf1c2": {
         "type": "collection-list",
         "blocks": {
-          "172b7cd3-88f9-40fa-8018-0dc4ae8969b5": {
+          "8362ccfb-a77b-4159-85c3-ef8ae1bed48b": {
             "type": "collection",
             "settings": {
-              "collection": "men"
+              "collection": "canvases"
             }
           },
-          "df891897-7319-4ebb-aaa7-bbf14ef75e87": {
+          "4caadbdd-6f48-4ec5-b722-0bc3e2a6b0a6": {
             "type": "collection",
             "settings": {
-              "collection": "women"
-            }
-          },
-          "a81bbf31-c1a6-4446-9cff-d6d6df900dac": {
-            "type": "collection",
-            "settings": {
-              "collection": "children"
-            }
-          },
-          "e0a44746-e8c7-4134-b713-54e130bed1eb": {
-            "type": "collection",
-            "settings": {
-              "collection": "babies"
+              "collection": "collectables"
             }
           }
         },
         "block_order": [
-          "172b7cd3-88f9-40fa-8018-0dc4ae8969b5",
-          "df891897-7319-4ebb-aaa7-bbf14ef75e87",
-          "a81bbf31-c1a6-4446-9cff-d6d6df900dac",
-          "e0a44746-e8c7-4134-b713-54e130bed1eb"
+          "8362ccfb-a77b-4159-85c3-ef8ae1bed48b",
+          "4caadbdd-6f48-4ec5-b722-0bc3e2a6b0a6"
         ],
         "settings": {
-          "heading": "Collection list",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
+          "heading": "Catalog",
+          "subheading": "<p> <\/p>",
           "container": true,
           "light_bg": true,
           "heading_size": "h2",
-          "heading_alignment": "text-center",
+          "heading_alignment": "text-left",
           "subheading_size": "",
-          "show_view_all_btn": false,
+          "show_view_all_btn": true,
           "view_all_btn_color": "btn-secondary",
-          "view_all_btn_size": "",
+          "view_all_btn_size": "btn-lg",
           "img_width": "480",
           "img_height": "480",
-          "img_thumbnail": true,
+          "img_thumbnail": false,
           "show_products_count": true,
           "row_": 2,
           "row_sm": 2,
@@ -171,9 +150,9 @@
           "row_lg": 4,
           "row_xl": 4,
           "row_xxl": 4,
-          "gutter_mobile": 3,
-          "gutter_tablet": 3,
-          "gutter_desktop": 4,
+          "gutter_mobile": 2,
+          "gutter_tablet": 2,
+          "gutter_desktop": 1,
           "padding_top": 8,
           "padding_bottom": 4,
           "margin_top": 0,
@@ -185,7 +164,6 @@
         "settings": {
           "container": true,
           "light_bg": false,
-          "img": "shopify:\/\/shop_images\/collection-6.jpg",
           "img_width": "720",
           "img_height": "720",
           "img_thumbnail": true,
@@ -210,7 +188,6 @@
         "settings": {
           "container": false,
           "section_height": "section-height-md",
-          "img": "shopify:\/\/shop_images\/lifestyle-1.jpg",
           "overlay_style": "overlay-dark",
           "overlay_opacity": "overlay-opacity-25",
           "img_alignment": "image-with-text-overlay-img-center",
@@ -235,42 +212,36 @@
           "e1cf75d0-157b-4a2e-a182-2e4a6d5ef5a0": {
             "type": "logo",
             "settings": {
-              "img": "shopify:\/\/shop_images\/brand-logo.jpg",
               "url": "#"
             }
           },
           "9bb82def-3826-41b5-905f-dfd52ad91d33": {
             "type": "logo",
             "settings": {
-              "img": "shopify:\/\/shop_images\/brand-logo.jpg",
               "url": "#"
             }
           },
           "4067c443-1eb5-414f-ae95-3b69634ee37f": {
             "type": "logo",
             "settings": {
-              "img": "shopify:\/\/shop_images\/brand-logo.jpg",
               "url": "#"
             }
           },
           "31c23b7b-a08b-4888-9072-fc0e6a53d7f2": {
             "type": "logo",
             "settings": {
-              "img": "shopify:\/\/shop_images\/brand-logo.jpg",
               "url": "#"
             }
           },
           "a4e3d41f-1026-4398-9854-488337cdda21": {
             "type": "logo",
             "settings": {
-              "img": "shopify:\/\/shop_images\/brand-logo.jpg",
               "url": "#"
             }
           },
           "5ca3d57d-533c-4459-b0a9-52a084aa7d3b": {
             "type": "logo",
             "settings": {
-              "img": "shopify:\/\/shop_images\/brand-logo.jpg",
               "url": "#"
             }
           }
@@ -315,7 +286,6 @@
           "4542108e-43c9-4d88-b996-7fd9b750fad4": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-4.jpg",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -324,7 +294,6 @@
           "27d3af47-c122-4a20-b3a2-4664ed203eca": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-1.jpg",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -333,7 +302,6 @@
           "585f88aa-a094-4668-8bc1-ba23f9bbdddd": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-5.jpg",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -342,7 +310,6 @@
           "73417504-c1cc-48b7-a328-5382ba548e24": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-2.jpg",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -351,7 +318,6 @@
           "0b1382b9-fc44-4c96-8dc4-0b9400753827": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-6.jpg",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -360,7 +326,6 @@
           "23ee11d4-c30a-476a-b877-6acf3c1ff7d2": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-3.jpg",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -369,7 +334,6 @@
           "62fe9250-d1ad-47d1-bb41-0de9b87f6645": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-3.jpg",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -378,7 +342,6 @@
           "f83caf36-0ad8-4436-a29e-e6eccb4f1fb2": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-6.jpg",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -387,7 +350,6 @@
           "39240703-c282-4405-8b9f-407fc004b217": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-2.jpg",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -396,7 +358,6 @@
           "63618c3b-5227-48c7-8fed-7ed05114ae35": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-5.jpg",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -405,7 +366,6 @@
           "990c8fa7-c8ba-4262-995d-b54d5011b479": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-1.jpg",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -414,7 +374,6 @@
           "9ffe7170-36a1-4b27-bd14-babe04f11bf2": {
             "type": "image",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-4.jpg",
               "caption": "Add your image caption",
               "caption_size": "h6"
             }
@@ -522,24 +481,21 @@
             "type": "testimonial",
             "settings": {
               "text": "<p>I love KondaSoft Shopify Themes, not only they are beautiful and attractive but they are super-fast as well. I have tried different theme providers before but with KondaSoft&#x27;s themes I could finish my store very quickly (within 1 week). I can recommend KondaSoft, that&#x27;s for sure... A+++<\/p>",
-              "name": "John Doe",
-              "img": "shopify:\/\/shop_images\/avatar.jpg"
+              "name": "John Doe"
             }
           },
           "16131300457e5a9b91-1": {
             "type": "testimonial",
             "settings": {
               "text": "<p>I have been successfully running my store with KondaSoft&#x27;s theme, KS WatchShop for 2 months now, and I&#x27;m really impressed with the performance and speed it has. The speed-rank for my Shopify store has increased dramatically after I switched to this theme...<\/p>",
-              "name": "Jane Doe",
-              "img": "shopify:\/\/shop_images\/avatar.jpg"
+              "name": "Jane Doe"
             }
           },
           "16131300457e5a9b91-2": {
             "type": "testimonial",
             "settings": {
               "text": "<p>I thought to try KondaSoft Themes for one of my new Ecommerce adventures (a gift shop for my fiancé) and oh i was really blown away by the performance. They are just fast. Also, their themes have many sections available so that i can adjust the homepage exactly as I want to....<\/p>",
-              "name": "Jim Doe",
-              "img": "shopify:\/\/shop_images\/avatar.jpg"
+              "name": "Jim Doe"
             }
           }
         },
@@ -573,7 +529,6 @@
           "161313402064cf991c-0": {
             "type": "content",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-6.jpg",
               "heading": "Add a title or tagline",
               "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
               "btn_label": "Learn more",
@@ -583,7 +538,6 @@
           "161313402064cf991c-1": {
             "type": "content",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-4.jpg",
               "heading": "Add a title or tagline",
               "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
               "btn_label": "Learn more",
@@ -593,7 +547,6 @@
           "161313402064cf991c-2": {
             "type": "content",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-1.jpg",
               "heading": "Add a title or tagline",
               "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
               "btn_label": "Learn more",
@@ -603,7 +556,6 @@
           "161313402064cf991c-3": {
             "type": "content",
             "settings": {
-              "img": "shopify:\/\/shop_images\/collection-5.jpg",
               "heading": "Add a title or tagline",
               "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
               "btn_label": "Learn more",
@@ -932,7 +884,7 @@
           "b4097452-7361-46b5-8f88-a21eaccf5c63": {
             "type": "social_menu",
             "settings": {
-              "menu": "social-menu",
+              "menu": "",
               "heading": "Follow us",
               "heading_size": "h5",
               "direction": "flex-column",
@@ -1157,6 +1109,11 @@
           "margin_top": 0,
           "margin_bottom": 7
         }
+      },
+      "clip-paths": {
+        "type": "clip-paths",
+        "settings": {
+        }
       }
     },
     "content_for_index": [
@@ -1183,6 +1140,7 @@
     ]
   },
   "presets": {
-    "Default": {}
+    "Default": {
+    }
   }
 }

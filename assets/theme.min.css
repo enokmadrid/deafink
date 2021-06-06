@@ -16281,6 +16281,28 @@ a:hover {
   object-fit: scale-down;
 }
 
+.navbar {
+  height: 80px;
+}
+
+.custom-logo {
+  position: absolute;
+  width: 113px;
+  top: 0;
+  height: auto;
+  padding: 10px;
+  clip-path: url(#clip-path-logo-base);
+  background: black;
+}
+
+.bg-transparent {
+  color: white;
+}
+
+.shift-up {
+  top: -80px;
+}
+
 /* 
     © 2021 KondaSoft
     https://www.kondasoft.com

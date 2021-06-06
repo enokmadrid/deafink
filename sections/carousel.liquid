@@ -14,7 +14,8 @@
     <!-- Carousel -->
     <div
         id="{{ 'carousel-' | append: section.id }}"
-        class="carousel {{ section.settings.style }} {{ section.settings.transition }}"
+        class="carousel {{ section.settings.style }} {{ section.settings.transition }}
+        {% if template == 'index' %}shift-up{% endif %}"
         data-bs-ride="carousel"
         data-bs-pause="hover"
         data-bs-interval="{{ interval }}">

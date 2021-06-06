@@ -1,0 +1,21 @@
+.navbar {
+    height: 80px;
+}
+
+.custom-logo {
+    position: absolute;
+    width: 113px;
+    top: 0;
+    height: auto;
+    padding: 10px;
+    clip-path: url(#clip-path-logo-base);
+    background: black;
+}
+
+.bg-transparent {
+    color: white;
+}
+// Carrousel Shift up on homepege
+.shift-up {
+    top: -80px;
+}
