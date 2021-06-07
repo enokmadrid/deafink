@@ -57,14 +57,24 @@
                     {% if block.settings.title != blank or block.settings.description != blank %}
                         <div class="carousel-caption">
                             {% unless block.settings.title == blank %}
-                                <h3 class="{{ block.settings.title_size }}">
+                                <h3 class="{{ block.settings.title_size }} mb-8">
                                     {{ block.settings.title }}
                                 </h3>
                             {% endunless %}
                             {% unless block.settings.description == blank %}
-                                <div class="rte">
+                                <div class="rte mb-6">
                                     {{ block.settings.description }}
                                 </div>
+                            {% endunless %}
+                            {% unless block.settings.primary_action == blank %}
+                                <a href="{{ block.settings.primary_link }}" class="btn btn-primary btn-lg">
+                                    {{ block.settings.primary_action }}
+                                </a>
+                            {% endunless %}
+                            {% unless block.settings.secondary_action == blank %}
+                                <a href="{{ block.settings.secondary_link }}" class="btn btn-secondary btn-lg">
+                                    {{ block.settings.secondary_action }}
+                                </a>
                             {% endunless %}
                         </div>
                     {% endif %}
@@ -248,6 +258,28 @@
                     "type": "richtext",
                     "id": "description",
                     "label": "Description"
+                },
+                {
+                    "type": "text",
+                    "id": "primary_action",
+                    "label": "Primary Button",
+                    "default": "Primary"
+                },
+                {
+                    "type": "url",
+                    "id": "primary_link",
+                    "label": "Primary Button link"
+                },
+                {
+                    "type": "text",
+                    "id": "secondary_action",
+                    "label": "Secondary Button",
+                    "default": "Secondary"
+                },
+                {
+                    "type": "url",
+                    "id": "secondary_link",
+                    "label": "Secondary Button link"
                 }
             ]
         }

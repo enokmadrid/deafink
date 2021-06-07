@@ -21,15 +21,31 @@
 
         <div class="heading-wrapper mb-3 overflow-hidden">
 
-            <h2 class="heading mb-1 {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}">
-                {{ section.settings.heading }}
-            </h2>
+            <div class="d-flex justify-content-between align-items-end">
+                <h2 class="heading mb-1 {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}">
+                    {{ section.settings.heading }}
+                </h2>
+                
+                <!-- 'View all' button -->
+                {% if section.settings.show_view_all_btn %}
+                    <div class="collection-list-view-all">
+                        <a
+                            class="collection-list-view-all-btn btn {{ section.settings.view_all_btn_color }} {{ section.settings.view_all_btn_size }}"
+                            href="/collections">
+                            {{ 'collection.view_all' | t }}
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+            
 
             {% unless section.settings.subheading == blank %}
                 <div class="subheading rte text-muted {{ section.settings.subheading_size }} {{ section.settings.heading_alignment }}">
                     {{ section.settings.subheading }}
                 </div>
             {% endunless %}
+
+            
 
         </div>
 
@@ -94,17 +110,6 @@
 
             {% endfor %}
         </ul>
-
-        <!-- 'View all' button -->
-        {% if section.settings.show_view_all_btn %}
-            <div class="collection-list-view-all text-center pt-0 pb-4">
-                <a
-                    class="collection-list-view-all-btn btn {{ section.settings.view_all_btn_color }} {{ section.settings.view_all_btn_size }}"
-                    href="/collections">
-                    {{ 'collection.view_all' | t }}
-                </a>
-            </div>
-        {% endif %}
 
     </div>
 </section>

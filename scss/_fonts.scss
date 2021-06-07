@@ -5,7 +5,23 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('Proxima-Nova.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('Proxima-Nova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
 
 .h1, .h2, .h3 {
     font-family: 'burtons_nightmareregular' !important;
+}
+
+.bg-light .heading {
+    color: var(--color-secondary);
 }

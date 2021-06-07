@@ -1,5 +1,8 @@
 .navbar {
     height: 80px;
+    .bg-transparent {
+        box-shadow: none !important;
+    }
 }
 
 .custom-logo {
@@ -15,7 +18,20 @@
 .bg-transparent {
     color: white;
 }
-// Carrousel Shift up on homepege
-.shift-up {
-    top: -80px;
+
+.navbar-dark .navbar-nav .nav-link {
+    text-transform: uppercase;
+    font: bold 0.75rem 'Proxima Nova'; //12px
+    padding: 0 1.25rem;
+    color: white;
+    letter-spacing: 1.3px;
+    &.active::after {
+        content: url('underline.svg');
+        display: block;
+        margin: 0 auto;
+        top: -3px;
+        height: 0;
+        width: 28px;
+        position: relative;
+    }
 }

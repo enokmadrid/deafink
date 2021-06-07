@@ -1,0 +1,31 @@
+// Carrousel Shift up on homepege
+.shift-up {
+    top: -80px;
+}
+
+.carousel-caption {
+    max-width: 1320px;
+    width: 1320px;
+    text-align: unset;
+    padding: 0 10px;
+    margin: 0 auto;
+    top: 48%;
+    left: 50%;
+    right: unset;
+    transform: translate(-50%, -50%);
+
+    h3::after {
+        content: url('underline.svg');
+        display: block;
+        top: 48px;
+        height: 0;
+        width: 120px;
+        position: relative;
+        float: left;
+    }
+
+    .rte {
+        max-width: 300px;
+        line-height: 25px;
+    }
+}

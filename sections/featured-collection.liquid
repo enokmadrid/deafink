@@ -10,9 +10,22 @@
 
         <div class="heading-wrapper mb-3 overflow-hidden">
 
-            <h2 class="heading mb-1 {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}">
-                {{ section.settings.heading }}
-            </h2>
+            <div class="d-flex justify-content-between align-items-end">
+                <h2 class="heading mb-1 {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}">
+                    {{ section.settings.heading }}
+                </h2>
+                
+                <!-- 'View all' button -->
+                {% if section.settings.show_view_all_btn %}
+                    <div class="featured-collection-view-all">
+                        <a
+                            class="featured-collection-view-all-btn btn btn-lg {{ section.settings.view_all_btn_color }} {{ section.settings.view_all_btn_size }}"
+                            href="/collections">
+                            {{ 'collection.view_all' | t }}
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
 
             {% unless section.settings.subheading == blank %}
                 <div class="subheading rte text-muted {{ section.settings.subheading_size }} {{ section.settings.heading_alignment }}">
@@ -24,18 +37,6 @@
 
         <!-- Items -->
         {% render 'items-grid' with items: collections[section.settings.collection].products, limit: section.settings.limit %}
-
-
-        <!-- 'View all' button -->
-        {% if section.settings.show_view_all_btn %}
-            <div class="featured-collection-view-all text-center pt-0 pb-4">
-                <a
-                    class="featured-collection-view-all-btn btn {{ section.settings.view_all_btn_color }} {{ section.settings.view_all_btn_size }}"
-                    href="/collections">
-                    {{ 'collection.view_all' | t }}
-                </a>
-            </div>
-        {% endif %}
 
     </div>
 </section>

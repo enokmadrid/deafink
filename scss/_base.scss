@@ -18,6 +18,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 // Main {
@@ -70,11 +72,32 @@ a:hover {
     }
 }
 
+// Buttons
+.btn-primary,
+.btn-secondary {
+    -webkit-clip-path: url(#clip-path-button);
+    clip-path: url(#clip-path-button);
+    transition: all 350ms cubic-bezier(0, 0, 0.2, 1);
+    border-radius: unset;
+}
+.btn {
+    font-family: 'Proxima Nova';
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+}
+
 // Buttons - Primary
 .btn-primary,
 .btn-primary:disabled {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
+    background: #21EAF4;
+    background: -moz-linear-gradient(left, #21EAF4 0%, #1499ED 50%, #21EAF4 100%);
+    background: -webkit-linear-gradient(left, #21EAF4 0%, #1499ED 50%, #21EAF4 100%);
+    background: linear-gradient(to right, #21EAF4 0%, #1499ED 50%, #21EAF4 100%);
+    background-size: 200% auto;
+    background-position: right;
+    transition: all 350ms cubic-bezier(0, 0, 0.2, 1);
+    color: var(--color-secondary);
 }
 
 .btn-outline-primary,
@@ -86,8 +109,8 @@ a:hover {
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
-    background-color: var(--color-primary-darken-10);
-    border-color: var(--color-primary-darken-10);
+    background-position: left;
+    color: var(--color-secondary);
 }
 
 .btn-outline-primary:hover,
@@ -106,8 +129,14 @@ a:hover {
 // Buttons - Secondary
 .btn-secondary,
 .btn-secondary:disabled {
-    background: var(--color-secondary);
-    border-color: var(--color-secondary);
+    background: #8984FF;
+    background: -moz-linear-gradient(left, #8984FF 0%, #7430FF 50%, #8984FF 100%);
+    background: -webkit-linear-gradient(left, #8984FF 0%, #7430FF 50%, #8984FF 100%);
+    background: linear-gradient(to right, #8984FF 0%, #7430FF 50%, #8984FF 100%);
+    background-size: 200% auto;
+    background-position: left;
+    transition: all 350ms cubic-bezier(0, 0, 0.2, 1);
+    color: white;
 }
 
 .btn-outline-secondary,
@@ -119,8 +148,8 @@ a:hover {
 .btn-secondary:hover,
 .btn-secondary:active,
 .btn-secondary:focus {
-    background-color: var(--color-secondary-darken-10);
-    border-color: var(--color-secondary-darken-10);
+    background-position: right;
+    color: white;
 }
 
 .btn-outline-secondary:hover,
@@ -252,7 +281,6 @@ a:hover {
     }
 }
 
-// Toast
 // Toast
 .toast-wrapper {
     display: flex;

@@ -14,8 +14,24 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("Proxima-Nova.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("Proxima-Nova-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
 .h1, .h2, .h3 {
   font-family: "burtons_nightmareregular" !important;
+}
+
+.bg-light .heading {
+  color: var(--color-secondary);
 }
 
 /* 
@@ -23,7 +39,7 @@
     https://www.kondasoft.com
 */
 h1, .h1 {
-  font-size: calc(4.25rem + 7.5vw) !important;
+  font-size: calc(2.25rem + 7.5vw) !important;
 }
 
 /*!
@@ -108,7 +124,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(4.25rem + 7.5vw);
+  font-size: calc(2.25rem + 7.5vw);
 }
 
 h2, .h2 {
@@ -3759,8 +3775,8 @@ textarea.form-control-lg {
 }
 
 .btn-lg, .btn-group-lg > .btn, .shopify-payment-button .btn-group-lg > .shopify-payment-button__button {
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  font-size: 0.75rem;
   border-radius: 0.3rem;
 }
 
@@ -4162,8 +4178,8 @@ textarea.form-control-lg {
 }
 
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .shopify-payment-button .btn-group-lg > .shopify-payment-button__button + .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .btn-group-vertical {
@@ -8226,7 +8242,7 @@ textarea.form-control-lg {
 }
 
 .fs-1 {
-  font-size: calc(4.25rem + 7.5vw) !important;
+  font-size: calc(2.25rem + 7.5vw) !important;
 }
 
 .fs-2 {
@@ -15939,6 +15955,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #main {
@@ -16013,10 +16031,32 @@ a:hover {
   box-shadow: 0 0 0 0.25rem var(--color-primary-alpha-25);
 }
 
+.btn-primary, .shopify-challenge__container .btn,
+.btn-secondary,
+.shopify-payment-button .shopify-payment-button__button {
+  -webkit-clip-path: url(#clip-path-button);
+  clip-path: url(#clip-path-button);
+  transition: all 350ms cubic-bezier(0, 0, 0.2, 1);
+  border-radius: unset;
+}
+
+.btn, .shopify-payment-button .shopify-payment-button__button {
+  font-family: "Proxima Nova";
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+}
+
 .btn-primary, .shopify-challenge__container .btn, .shopify-challenge__container .shopify-payment-button .shopify-payment-button__button, .shopify-payment-button .shopify-challenge__container .shopify-payment-button__button,
 .btn-primary:disabled {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
+  background: #21EAF4;
+  background: -moz-linear-gradient(left, #21EAF4 0%, #1499ED 50%, #21EAF4 100%);
+  background: -webkit-linear-gradient(left, #21EAF4 0%, #1499ED 50%, #21EAF4 100%);
+  background: linear-gradient(to right, #21EAF4 0%, #1499ED 50%, #21EAF4 100%);
+  background-size: 200% auto;
+  background-position: right;
+  transition: all 350ms cubic-bezier(0, 0, 0.2, 1);
+  color: var(--color-secondary);
 }
 
 .btn-outline-primary,
@@ -16034,8 +16074,8 @@ a:hover {
 .shopify-challenge__container .btn:focus,
 .shopify-challenge__container .shopify-payment-button .shopify-payment-button__button:focus,
 .shopify-payment-button .shopify-challenge__container .shopify-payment-button__button:focus {
-  background-color: var(--color-primary-darken-10);
-  border-color: var(--color-primary-darken-10);
+  background-position: left;
+  color: var(--color-secondary);
 }
 
 .btn-outline-primary:hover,
@@ -16053,8 +16093,14 @@ a:hover {
 
 .btn-secondary, .shopify-payment-button .shopify-payment-button__button,
 .btn-secondary:disabled {
-  background: var(--color-secondary);
-  border-color: var(--color-secondary);
+  background: #8984FF;
+  background: -moz-linear-gradient(left, #8984FF 0%, #7430FF 50%, #8984FF 100%);
+  background: -webkit-linear-gradient(left, #8984FF 0%, #7430FF 50%, #8984FF 100%);
+  background: linear-gradient(to right, #8984FF 0%, #7430FF 50%, #8984FF 100%);
+  background-size: 200% auto;
+  background-position: left;
+  transition: all 350ms cubic-bezier(0, 0, 0.2, 1);
+  color: white;
 }
 
 .btn-outline-secondary,
@@ -16068,8 +16114,8 @@ a:hover {
 .shopify-payment-button .shopify-payment-button__button:active,
 .btn-secondary:focus,
 .shopify-payment-button .shopify-payment-button__button:focus {
-  background-color: var(--color-secondary-darken-10);
-  border-color: var(--color-secondary-darken-10);
+  background-position: right;
+  color: white;
 }
 
 .btn-outline-secondary:hover,
@@ -16284,6 +16330,9 @@ a:hover {
 .navbar {
   height: 80px;
 }
+.navbar .bg-transparent {
+  box-shadow: none !important;
+}
 
 .custom-logo {
   position: absolute;
@@ -16299,8 +16348,21 @@ a:hover {
   color: white;
 }
 
-.shift-up {
-  top: -80px;
+.navbar-dark .navbar-nav .nav-link {
+  text-transform: uppercase;
+  font: bold 0.75rem "Proxima Nova";
+  padding: 0 1.25rem;
+  color: white;
+  letter-spacing: 1.3px;
+}
+.navbar-dark .navbar-nav .nav-link.active::after {
+  content: url("underline.svg");
+  display: block;
+  margin: 0 auto;
+  top: -3px;
+  height: 0;
+  width: 28px;
+  position: relative;
 }
 
 /* 
@@ -16336,6 +16398,35 @@ a:hover {
 }
 #footer.text-white a:not(.btn):hover {
   color: rgba(255, 255, 255, 0.75);
+}
+
+.shift-up {
+  top: -80px;
+}
+
+.carousel-caption {
+  max-width: 1320px;
+  width: 1320px;
+  text-align: unset;
+  padding: 0 10px;
+  margin: 0 auto;
+  top: 48%;
+  left: 50%;
+  right: unset;
+  transform: translate(-50%, -50%);
+}
+.carousel-caption h3::after, .carousel-caption .h3::after {
+  content: url("underline.svg");
+  display: block;
+  top: 48px;
+  height: 0;
+  width: 120px;
+  position: relative;
+  float: left;
+}
+.carousel-caption .rte {
+  max-width: 300px;
+  line-height: 25px;
 }
 
 /* 

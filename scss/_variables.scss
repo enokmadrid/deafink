@@ -31,8 +31,13 @@ $opacities: [
     0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 
 ] !default;
 
-$h1-font-size:                calc(4.25rem + 7.5vw) !default;
+$h1-font-size:                calc(2.25rem + 7.5vw) !default;
 $h2-font-size:                70px !default;
 $h3-font-size:                50px !default;
 
 h1, .h1 { font-size: $h1-font-size !important; }
+
+// Buttons
+$btn-font-size-lg:            12px !default;
+$btn-padding-y-lg:            1rem !default;
+$btn-padding-x-lg:            2rem !default;

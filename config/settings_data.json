@@ -47,9 +47,14 @@
           "16124340768622aa4c-0": {
             "type": "image",
             "settings": {
+              "image": "shopify:\/\/shop_images\/hero_0a060c04-e4a9-40c6-833b-174e16c695d7.png",
               "title": "Deafink Tattoos",
               "title_size": "h1",
-              "description": "<p>Tattoo art, fine-art painitng, sculptures, and portfolio of Gayle Sanchez.<\/p>"
+              "description": "<p>Tattoo art, fine-art painitng, sculptures, and portfolio of Gayle Sanchez.<\/p>",
+              "primary_action": "Schedule an Appointment",
+              "primary_link": "#",
+              "secondary_action": "See Portfolio",
+              "secondary_link": "shopify:\/\/pages\/gallery"
             }
           }
         },
@@ -75,14 +80,14 @@
         "settings": {
           "collection": "men",
           "heading": "Featured Products",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
+          "subheading": "",
           "limit": 6,
           "container": true,
           "light_bg": false,
           "heading_size": "h2",
-          "heading_alignment": "text-center",
+          "heading_alignment": "text-start",
           "subheading_size": "",
-          "show_view_all_btn": false,
+          "show_view_all_btn": true,
           "view_all_btn_color": "btn-secondary",
           "view_all_btn_size": "",
           "img_width": "480",
@@ -396,7 +401,7 @@
         "settings": {
           "heading": "Gallery",
           "subheading": "<p>Write something catchy for this section.<\/p>",
-          "container": false,
+          "container": true,
           "light_bg": false,
           "heading_size": "h2",
           "heading_alignment": "text-center",
@@ -425,6 +430,7 @@
       },
       "1613036565184adb1d": {
         "type": "separator",
+        "disabled": true,
         "settings": {
           "container": true,
           "bg_color": "#dee2e6",
@@ -449,8 +455,8 @@
           "show_description": true,
           "description_truncate": "240",
           "show_view_product_btn": true,
-          "view_product_btn_color": "btn-outline-primary",
-          "view_product_btn_size": "",
+          "view_product_btn_color": "btn-primary",
+          "view_product_btn_size": "btn-lg",
           "show_social_sharing": true,
           "padding_top": 0,
           "padding_bottom": 0,
@@ -460,6 +466,7 @@
       },
       "16131223138a584ff0": {
         "type": "newsletter",
+        "disabled": true,
         "settings": {
           "heading": "Newsletter subscribe",
           "subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
@@ -525,16 +532,8 @@
       },
       "161313402064cf991c": {
         "type": "text-columns-with-image",
+        "disabled": true,
         "blocks": {
-          "161313402064cf991c-0": {
-            "type": "content",
-            "settings": {
-              "heading": "Add a title or tagline",
-              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
-              "btn_label": "Learn more",
-              "btn_url": "#"
-            }
-          },
           "161313402064cf991c-1": {
             "type": "content",
             "settings": {
@@ -564,7 +563,6 @@
           }
         },
         "block_order": [
-          "161313402064cf991c-0",
           "161313402064cf991c-1",
           "161313402064cf991c-2",
           "161313402064cf991c-3"
@@ -601,6 +599,7 @@
       },
       "1613321883059203ae": {
         "type": "map",
+        "disabled": true,
         "settings": {
           "heading": "Our physical address",
           "subheading": "<p>Come and say Hello. We will be happy to meet your in person.<\/p>",
@@ -627,6 +626,7 @@
       },
       "1613465098c76677b8": {
         "type": "richtext",
+        "disabled": true,
         "settings": {
           "heading": "Richtext",
           "subheading": "<p>Write something catchy for this section.<\/p>",
@@ -645,6 +645,7 @@
       },
       "161346609112cd0f90": {
         "type": "video",
+        "disabled": true,
         "settings": {
           "heading": "Video",
           "subheading": "<p>Write something catchy for this section.<\/p>",
@@ -733,6 +734,7 @@
       },
       "16136560969da8aed2": {
         "type": "blog-posts",
+        "disabled": true,
         "settings": {
           "blog": "news",
           "limit": 4,
@@ -772,15 +774,6 @@
           "padding_top": 0,
           "padding_bottom": 0,
           "margin_top": 0,
-          "margin_bottom": 7
-        }
-      },
-      "16136830093258d47c": {
-        "type": "separator",
-        "settings": {
-          "container": true,
-          "bg_color": "#dee2e6",
-          "margin_top": 8,
           "margin_bottom": 7
         }
       },
@@ -937,6 +930,7 @@
       },
       "1613737250d2b7859f": {
         "type": "separator",
+        "disabled": true,
         "settings": {
           "container": true,
           "bg_color": "#dee2e6",
@@ -1114,10 +1108,18 @@
         "type": "clip-paths",
         "settings": {
         }
+      },
+      "page-template": {
+        "type": "page-template",
+        "settings": {
+          "max_width": "768",
+          "heading_size": "display-5"
+        }
       }
     },
     "content_for_index": [
       "16124340768622aa4c",
+      "1613036274b5bc23d7",
       "161243980752a5ed7a",
       "161281990869fdf1c2",
       "16130473820c97e316",
@@ -1125,9 +1127,7 @@
       "1613034094b1e14cbd",
       "161313402064cf991c",
       "1613036565184adb1d",
-      "1613036274b5bc23d7",
       "16129467980997b2cd",
-      "16136830093258d47c",
       "16131300457e5a9b91",
       "161346609112cd0f90",
       "161368561105e641b5",
