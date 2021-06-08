@@ -72,7 +72,10 @@
           "img_height": "640",
           "image_min_height": "360",
           "margin_top": 0,
-          "margin_bottom": 0
+          "margin_bottom": 0,
+          "has_octo_edge": true,
+          "edge_position": "bottom-right",
+          "edge_color": "4f0d96"
         }
       },
       "161243980752a5ed7a": {
@@ -327,61 +330,6 @@
               "caption": "Add your image caption",
               "caption_size": "h6"
             }
-          },
-          "23ee11d4-c30a-476a-b877-6acf3c1ff7d2": {
-            "type": "image",
-            "settings": {
-              "url": "#",
-              "caption": "Add your image caption",
-              "caption_size": "h6"
-            }
-          },
-          "62fe9250-d1ad-47d1-bb41-0de9b87f6645": {
-            "type": "image",
-            "settings": {
-              "url": "#",
-              "caption": "Add your image caption",
-              "caption_size": "h6"
-            }
-          },
-          "f83caf36-0ad8-4436-a29e-e6eccb4f1fb2": {
-            "type": "image",
-            "settings": {
-              "url": "#",
-              "caption": "Add your image caption",
-              "caption_size": "h6"
-            }
-          },
-          "39240703-c282-4405-8b9f-407fc004b217": {
-            "type": "image",
-            "settings": {
-              "url": "#",
-              "caption": "Add your image caption",
-              "caption_size": "h6"
-            }
-          },
-          "63618c3b-5227-48c7-8fed-7ed05114ae35": {
-            "type": "image",
-            "settings": {
-              "url": "#",
-              "caption": "Add your image caption",
-              "caption_size": "h6"
-            }
-          },
-          "990c8fa7-c8ba-4262-995d-b54d5011b479": {
-            "type": "image",
-            "settings": {
-              "url": "#",
-              "caption": "Add your image caption",
-              "caption_size": "h6"
-            }
-          },
-          "9ffe7170-36a1-4b27-bd14-babe04f11bf2": {
-            "type": "image",
-            "settings": {
-              "caption": "Add your image caption",
-              "caption_size": "h6"
-            }
           }
         },
         "block_order": [
@@ -389,36 +337,29 @@
           "27d3af47-c122-4a20-b3a2-4664ed203eca",
           "585f88aa-a094-4668-8bc1-ba23f9bbdddd",
           "73417504-c1cc-48b7-a328-5382ba548e24",
-          "0b1382b9-fc44-4c96-8dc4-0b9400753827",
-          "23ee11d4-c30a-476a-b877-6acf3c1ff7d2",
-          "62fe9250-d1ad-47d1-bb41-0de9b87f6645",
-          "f83caf36-0ad8-4436-a29e-e6eccb4f1fb2",
-          "39240703-c282-4405-8b9f-407fc004b217",
-          "63618c3b-5227-48c7-8fed-7ed05114ae35",
-          "990c8fa7-c8ba-4262-995d-b54d5011b479",
-          "9ffe7170-36a1-4b27-bd14-babe04f11bf2"
+          "0b1382b9-fc44-4c96-8dc4-0b9400753827"
         ],
         "settings": {
-          "heading": "Gallery",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
+          "heading": "See the Artwork",
+          "subheading": "",
           "container": true,
           "background": "bg-secondary",
           "heading_size": "h2",
           "heading_alignment": "text-start",
           "subheading_size": "",
           "limit": "6",
-          "img_width": "480",
-          "img_height": "480",
-          "img_thumbnail": true,
-          "overlay_style": "overlay-dark",
+          "img_width": "520",
+          "img_height": "1100",
+          "img_thumbnail": false,
+          "overlay_style": "overlay-light",
           "overlay_opacity": "overlay-opacity-50",
-          "overlay_blur": true,
+          "overlay_blur": false,
           "row_": 2,
           "row_sm": 3,
           "row_md": 3,
           "row_lg": 3,
-          "row_xl": 6,
-          "row_xxl": 6,
+          "row_xl": 5,
+          "row_xxl": 5,
           "gutter_mobile": 3,
           "gutter_tablet": 3,
           "gutter_desktop": 3,

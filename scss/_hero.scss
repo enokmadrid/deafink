@@ -26,11 +26,3 @@
     }
 }
 
-
-.has-octo-bottom::after {
-    content: url('octo_edge_bottom.svg');
-    width: 100%;
-    position: absolute;
-    bottom: -8px;
-    z-index: 1;
-}

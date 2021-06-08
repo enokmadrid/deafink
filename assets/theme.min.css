@@ -16327,6 +16327,24 @@ a:hover {
   object-fit: scale-down;
 }
 
+.octo-edge {
+  position: absolute;
+  z-index: 1;
+}
+.octo-edge.top-left {
+  transform: scale(-1, -1);
+}
+.octo-edge.top-right {
+  transform: scaleY(-1);
+}
+.octo-edge.bottom-left {
+  bottom: -1px;
+  transform: scaleX(-1);
+}
+.octo-edge.bottom-right {
+  bottom: -1px;
+}
+
 .navbar {
   height: 80px;
 }
@@ -16423,14 +16441,6 @@ a:hover {
 .carousel-caption .rte {
   max-width: 300px;
   line-height: 25px;
-}
-
-.has-octo-bottom::after {
-  content: url("octo_edge_bottom.svg");
-  width: 100%;
-  position: absolute;
-  bottom: -8px;
-  z-index: 1;
 }
 
 /* 
