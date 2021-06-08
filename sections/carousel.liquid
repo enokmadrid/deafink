@@ -33,7 +33,7 @@
             </ol>
         {% endif %}
         
-        <div class="carousel-inner">
+        <div class="carousel-inner has-octo-bottom">
             {% for block in section.blocks %}
                 <div
                     class="carousel-item {% if forloop.first == true %}active{% endif %}">
@@ -55,7 +55,7 @@
                     {% endif %}
 
                     {% if block.settings.title != blank or block.settings.description != blank %}
-                        <div class="carousel-caption">
+                        <div class="carousel-caption container">
                             {% unless block.settings.title == blank %}
                                 <h3 class="{{ block.settings.title_size }} mb-8">
                                     {{ block.settings.title }}

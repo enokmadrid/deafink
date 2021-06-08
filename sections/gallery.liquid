@@ -16,7 +16,7 @@
 
 <section 
     id="gallery-{{ section.id }}" 
-    class="gallery {% if section.settings.light_bg %}bg-light{% endif %} {{ section.settings.overlay_style }} {{ section.settings.overlay_opacity }} {% if section.settings.overlay_blur %}overlay-blur{% endif %} {{ pt }} {{ pb }} {{ mt }} {{ mb }}">
+    class="gallery {{ section.settings.background }} {{ section.settings.overlay_style }} {{ section.settings.overlay_opacity }} {% if section.settings.overlay_blur %}overlay-blur{% endif %} {{ pt }} {{ pb }} {{ mt }} {{ mb }}">
     <div class="{% if section.settings.container %}container{% else %}container-fluid{% endif %}">
 
         {% if section.settings.heading != blank or section.settings.subheading != blank %}
@@ -117,10 +117,16 @@
             "default": false
         },
         {
-            "type": "checkbox",
-            "id": "light_bg",
-            "label": "Light background",
-            "default": false
+            "type": "select",
+            "id": "background",
+            "label": "Background color",
+            "default": "bg-secondary",
+            "options": [
+                {  "value": "bg-dark", "label": "Dark" },
+                {  "value": "bg-light", "label": "Light" },
+                {  "value": "bg-primary", "label": "Primary Color" },
+                {  "value": "bg-secondary", "label": "Secondary Color" }
+            ]
         },
         {
             "type": "select",

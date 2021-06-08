@@ -16401,15 +16401,11 @@ a:hover {
 }
 
 .shift-up {
-  top: -80px;
+  margin-top: -80px;
 }
 
 .carousel-caption {
-  max-width: 1320px;
-  width: 1320px;
   text-align: unset;
-  padding: 0 10px;
-  margin: 0 auto;
   top: 48%;
   left: 50%;
   right: unset;
@@ -16427,6 +16423,14 @@ a:hover {
 .carousel-caption .rte {
   max-width: 300px;
   line-height: 25px;
+}
+
+.has-octo-bottom::after {
+  content: url("octo_edge_bottom.svg");
+  width: 100%;
+  position: absolute;
+  bottom: -8px;
+  z-index: 1;
 }
 
 /* 

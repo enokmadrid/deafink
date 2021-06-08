@@ -47,7 +47,7 @@
           "16124340768622aa4c-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/hero_0a060c04-e4a9-40c6-833b-174e16c695d7.png",
+              "image": "shopify:\/\/shop_images\/hero_b423fcec-2cb9-4f2d-aaf8-0e4c6a230e7b.png",
               "title": "Deafink Tattoos",
               "title_size": "h1",
               "description": "<p>Tattoo art, fine-art painitng, sculptures, and portfolio of Gayle Sanchez.<\/p>",
@@ -72,7 +72,7 @@
           "img_height": "640",
           "image_min_height": "360",
           "margin_top": 0,
-          "margin_bottom": 8
+          "margin_bottom": 0
         }
       },
       "161243980752a5ed7a": {
@@ -402,9 +402,9 @@
           "heading": "Gallery",
           "subheading": "<p>Write something catchy for this section.<\/p>",
           "container": true,
-          "light_bg": false,
+          "background": "bg-secondary",
           "heading_size": "h2",
-          "heading_alignment": "text-center",
+          "heading_alignment": "text-start",
           "subheading_size": "",
           "limit": "6",
           "img_width": "480",
@@ -423,9 +423,9 @@
           "gutter_tablet": 3,
           "gutter_desktop": 3,
           "padding_top": 0,
-          "padding_bottom": 0,
+          "padding_bottom": 12,
           "margin_top": 0,
-          "margin_bottom": 7
+          "margin_bottom": 0
         }
       },
       "1613036565184adb1d": {
@@ -849,27 +849,11 @@
       "footer-blocks": {
         "type": "footer-blocks",
         "blocks": {
-          "c4c94464-ebb5-4d24-a49f-192eb027cc26": {
-            "type": "richtext",
-            "settings": {
-              "heading": "About KS BootShop",
-              "description": "<p>The best Free Shopify Theme powered by Bootstrap framework, developed respecting Shopify Themes Requirements, optimized for maximum page-speed and that can be easily customized for any store.<\/p><p><a href=\"https:\/\/www.kondasoft.com\/collections\/shopify-themes\/products\/ks-bootshop\" title=\"https:\/\/www.kondasoft.com\/collections\/shopify-themes\/products\/ks-bootshop\" target=\"_blank\">Download Themes »<\/a><br\/> <\/p>",
-              "heading_size": "h5"
-            }
-          },
-          "e00e2603-5c9c-4373-9917-00d8e58fb8f5": {
-            "type": "richtext",
-            "settings": {
-              "heading": "About KondaSoft",
-              "description": "<p>Premium Shopify Themes, that are awesome to your customers, blazing-fast in loading time and built-in with the necessary features to increase your store conversion rates (CVR) and average order value (AOV).<\/p><p><a href=\"https:\/\/www.kondasoft.com\/collections\/shopify-themes\">Browse Themes »<\/a><\/p>",
-              "heading_size": "h5"
-            }
-          },
           "84d98f57-a71d-49ea-a1a3-3fab0b59ff64": {
             "type": "menu",
             "settings": {
               "menu": "footer",
-              "heading": "Footer menu",
+              "heading": "Info",
               "heading_size": "h5",
               "direction": ""
             }
@@ -878,23 +862,31 @@
             "type": "social_menu",
             "settings": {
               "menu": "",
-              "heading": "Follow us",
+              "heading": "Contact Me",
               "heading_size": "h5",
               "direction": "flex-column",
               "icon_size": "18",
               "show_only_icons": false
             }
+          },
+          "b48e216c-724c-4c80-bc75-f7380eb5756f": {
+            "type": "menu",
+            "settings": {
+              "menu": "main-menu",
+              "heading": "Quick links",
+              "heading_size": "h5",
+              "direction": "flex-column"
+            }
           }
         },
         "block_order": [
-          "c4c94464-ebb5-4d24-a49f-192eb027cc26",
-          "e00e2603-5c9c-4373-9917-00d8e58fb8f5",
           "84d98f57-a71d-49ea-a1a3-3fab0b59ff64",
-          "b4097452-7361-46b5-8f88-a21eaccf5c63"
+          "b4097452-7361-46b5-8f88-a21eaccf5c63",
+          "b48e216c-724c-4c80-bc75-f7380eb5756f"
         ],
         "settings": {
           "container": true,
-          "bg_color": "#343a40",
+          "bg_color": "#21064e",
           "bg_style": "text-white",
           "row_": 1,
           "row_sm": 2,
@@ -906,7 +898,7 @@
           "gutter_tablet": 4,
           "gutter_desktop": 6,
           "padding_top": 8,
-          "padding_bottom": 0,
+          "padding_bottom": 8,
           "margin_top": 0,
           "margin_bottom": 0
         }
@@ -915,15 +907,15 @@
         "type": "footer",
         "settings": {
           "container": true,
-          "bg_color": "#343a40",
+          "bg_color": "#000000",
           "bg_style": "text-white",
-          "show_powered_by": true,
+          "show_powered_by": false,
           "show_theme_by": true,
           "show_payment_icons": true,
-          "show_sep": true,
-          "sep_color": "#5a6066",
-          "padding_top": 6,
-          "padding_bottom": 2,
+          "show_sep": false,
+          "sep_color": "#000000",
+          "padding_top": 4,
+          "padding_bottom": 4,
           "margin_top": 0,
           "margin_bottom": 0
         }
