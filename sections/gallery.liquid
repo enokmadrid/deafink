@@ -1,7 +1,5 @@
 {% assign pt = section.settings.padding_top | prepend: 'pt-' %}
-{% assign pb = section.settings.padding_bottom | prepend: 'pb-' %}
-{% assign mt = section.settings.margin_top | prepend: 'mt-' %}
-{% assign mb = section.settings.margin_bottom | prepend: 'mb-' %}
+{% assign pb = section.settings.padding_bottom | prepend: 'pt-' %}
 
 {% assign row_    = section.settings.row_ | prepend: 'row-cols-' %}
 {% assign row_sm  = section.settings.row_sm | prepend: 'row-cols-sm-' %}
@@ -16,7 +14,7 @@
 
 <section 
     id="gallery-{{ section.id }}" 
-    class="gallery {{ section.settings.background }} {{ section.settings.overlay_style }} {{ section.settings.overlay_opacity }} {% if section.settings.overlay_blur %}overlay-blur{% endif %} {{ pt }} {{ pb }} {{ mt }} {{ mb }}">
+    class="gallery {{ section.settings.background }} {{ section.settings.overlay_style }} {{ section.settings.overlay_opacity }} {% if section.settings.overlay_blur %}overlay-blur{% endif %} {{ pt }}">
     <div class="{% if section.settings.container %}container{% else %}container-fluid{% endif %}">
 
         {% if section.settings.heading != blank or section.settings.subheading != blank %}
@@ -85,6 +83,10 @@
 
         </ul>
     </div>
+
+    {% if section.settings.has_octo_edge == true %} 
+        {% include 'octo-edge' %}
+    {% endif %}
 </section>
 
 
@@ -335,22 +337,37 @@
             "default": 0
         },
         {
-            "type": "range",
-            "id": "margin_top",
-            "label": "Margin top",
-            "min": 0,
-            "max": 12,
-            "step": 1,
-            "default": 0
+            "type": "header",
+            "content": "Container Settings"
         },
         {
-            "type": "range",
-            "id": "margin_bottom",
-            "label": "Margin bottom",
-            "min": 0,
-            "max": 12,
-            "step": 1,
-            "default": 7
+            "type": "checkbox",
+            "id": "has_octo_edge",
+            "label": "Add Octo Edge",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "edge_position",
+            "label": "Edge Position",
+            "default": "bottom-left",
+            "options": [
+                { "value": "bottom-left", "label": "Bottom Left" },
+                { "value": "bottom-right", "label": "Bottom Right" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "edge_color",
+            "label": "Edge Color",
+            "default": "4f0d96",
+            "options": [
+                { "value": "000000", "label": "Black" },
+                { "value": "FFFFFF", "label": "White" },
+                { "value": "4f0d96", "label": "Purple" },
+                { "value": "21eaf4", "label": "Teal" },
+                { "value": "21064e", "label": "Dark" }
+            ]
         }
     ],
     "blocks": [

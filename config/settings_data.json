@@ -52,7 +52,7 @@
               "title_size": "h1",
               "description": "<p>Tattoo art, fine-art painitng, sculptures, and portfolio of Gayle Sanchez.<\/p>",
               "primary_action": "Schedule an Appointment",
-              "primary_link": "#",
+              "primary_link": "shopify:\/\/products\/tattoo-appointment-reservation",
               "secondary_action": "See Portfolio",
               "secondary_link": "shopify:\/\/pages\/gallery"
             }
@@ -71,8 +71,6 @@
           "img_width": "1920",
           "img_height": "640",
           "image_min_height": "360",
-          "margin_top": 0,
-          "margin_bottom": 0,
           "has_octo_edge": true,
           "edge_position": "bottom-right",
           "edge_color": "4f0d96"
@@ -81,7 +79,7 @@
       "161243980752a5ed7a": {
         "type": "featured-collection",
         "settings": {
-          "collection": "men",
+          "collection": "canvases",
           "heading": "Featured Products",
           "subheading": "",
           "limit": 6,
@@ -211,7 +209,7 @@
           "padding_top": 0,
           "padding_bottom": 0,
           "margin_top": 0,
-          "margin_bottom": 8
+          "margin_bottom": 0
         }
       },
       "1613034094b1e14cbd": {
@@ -356,17 +354,18 @@
           "overlay_blur": false,
           "row_": 2,
           "row_sm": 3,
-          "row_md": 3,
-          "row_lg": 3,
+          "row_md": 4,
+          "row_lg": 5,
           "row_xl": 5,
           "row_xxl": 5,
           "gutter_mobile": 3,
           "gutter_tablet": 3,
           "gutter_desktop": 3,
           "padding_top": 0,
-          "padding_bottom": 12,
-          "margin_top": 0,
-          "margin_bottom": 0
+          "padding_bottom": 0,
+          "has_octo_edge": true,
+          "edge_position": "bottom-left",
+          "edge_color": "000000"
         }
       },
       "1613036565184adb1d": {
@@ -382,16 +381,16 @@
       "16130473820c97e316": {
         "type": "featured-product",
         "settings": {
-          "product": "bag-series-1",
+          "product": "tattoo-appointment-reservation",
           "container": true,
           "light_bg": false,
           "badge": "Featured product",
-          "badge_color": "bg-light text-secondary",
-          "heading_size": "h2",
-          "img_width": "720",
-          "img_height": "720",
-          "img_thumbnail": true,
-          "show_vendor": false,
+          "badge_color": "bg-primary",
+          "heading_size": "h3",
+          "img_width": "420",
+          "img_height": "320",
+          "img_thumbnail": false,
+          "show_vendor": true,
           "show_price": true,
           "show_description": true,
           "description_truncate": "240",
@@ -402,7 +401,7 @@
           "padding_top": 0,
           "padding_bottom": 0,
           "margin_top": 0,
-          "margin_bottom": 8
+          "margin_bottom": 0
         }
       },
       "16131223138a584ff0": {
@@ -455,7 +454,7 @@
         "settings": {
           "heading": "Customer testimonials",
           "subheading": "<p>Write something catchy for this section.<\/p>",
-          "light_bg": false,
+          "light_bg": true,
           "heading_size": "h2",
           "heading_alignment": "text-center",
           "subheading_size": "",
@@ -468,7 +467,7 @@
           "padding_top": 0,
           "padding_bottom": 0,
           "margin_top": 0,
-          "margin_bottom": 7
+          "margin_bottom": 0
         }
       },
       "161313402064cf991c": {
