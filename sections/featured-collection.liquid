@@ -39,6 +39,10 @@
         {% render 'items-grid' with items: collections[section.settings.collection].products, limit: section.settings.limit %}
 
     </div>
+
+    {% if section.settings.has_octo_edge == true %} 
+        {% include 'octo-edge' %}
+    {% endif %}
 </section>
 
 {% schema %}
@@ -353,6 +357,40 @@
             "max": 12,
             "step": 1,
             "default": 7
+        },
+        {
+            "type": "header",
+            "content": "Container Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "has_octo_edge",
+            "label": "Add Octo Edge",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "edge_position",
+            "label": "Edge Position",
+            "default": "bottom-left",
+            "options": [
+                { "value": "bottom-left", "label": "Bottom Left" },
+                { "value": "bottom-right", "label": "Bottom Right" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "edge_color",
+            "label": "Edge Color",
+            "default": "4f0d96",
+            "options": [
+                { "value": "000000", "label": "Black" },
+                { "value": "FFFFFF", "label": "White" },
+                { "value": "F4F4F4", "label": "Gray"},
+                { "value": "4f0d96", "label": "Purple" },
+                { "value": "21eaf4", "label": "Teal" },
+                { "value": "21064e", "label": "Dark" }
+            ]
         }
     ],
     "presets": [

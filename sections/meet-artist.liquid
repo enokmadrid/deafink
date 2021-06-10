@@ -1,0 +1,178 @@
+{% assign pt = section.settings.padding_top | prepend: 'pb-' %}
+{% assign pb = section.settings.padding_bottom | prepend: 'pb-' %}
+
+<div class="{% if section.settings.container %}container{% endif %}">
+    <section 
+        id="intro-artist-{{ section.id }}" 
+        class="{% if section.settings.light_bg %}bg-light{% endif %} {{ section.settings.section_height }} {{ pb }}">
+
+        {% if section.settings.has_octo_edge == true %} 
+            <div class="{{ pt }}">{% include 'octo-edge' %}</div>
+        {% endif %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col col-5">
+                    {% if section.settings.heading != blank %}
+                        <div class="heading-wrapper overflow-hidden">
+
+                            {% unless section.settings.heading == blank %}
+                                <h2 class="heading mb-1 {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}">
+                                    {{ section.settings.heading }}
+                                </h2>
+                            {% endunless %}
+
+                            {% unless section.settings.subheading == blank %}
+                                <div class="subheading rte text-muted {{ section.settings.subheading_size }} {{ section.settings.heading_alignment }}">
+                                    {{ section.settings.subheading }}
+                                </div>
+                            {% endunless %}
+
+                            {% unless section.settings.primary_action == blank %}
+                                <a href="{{ section.settings.primary_link }}" class="btn btn-primary btn-lg">
+                                    {{ section.settings.primary_action }}
+                                </a>
+                            {% endunless %}
+
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="col col-7">
+                    <img src="https://placehold.co/600x400" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% schema %}
+{
+    "name": "Meet The Artist",
+    "settings": [
+        {
+            "type": "header",
+            "content": "General settings"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "info": "Leave empty to disable",
+            "default": "Customer testimonials"
+        },
+        {
+            "type": "richtext",
+            "id": "subheading",
+            "label": "Subheading",
+            "info": "Leave empty to disable",
+            "default": "<p>Write something catchy for this section.</p>"
+        },
+        {
+            "type": "checkbox",
+            "id": "light_bg",
+            "label": "Light background",
+            "default": false
+        },
+        {
+            "type": "select",
+            "id": "heading_size",
+            "label": "Heading Size",
+            "default": "h2",
+            "options": [
+                { "value": "h1", "label": "H1" },
+                { "value": "h2", "label": "H2" },
+                { "value": "h3", "label": "H3" },
+                { "value": "h4", "label": "H4" },
+                { "value": "h5", "label": "H5" },
+                { "value": "h6", "label": "H6" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "heading_alignment",
+            "label": "Heading alignment",
+            "options": [
+                { "value": "text-start", "label": "Left" },
+                { "value": "text-center", "label": "Center" },
+                { "value": "text-end", "label": "Right" }
+            ],
+            "default": "text-center"
+        },
+        {
+            "type": "text",
+            "id": "primary_action",
+            "label": "Primary Button",
+            "default": "Primary"
+        },
+        {
+            "type": "url",
+            "id": "primary_link",
+            "label": "Primary Button link"
+        },
+        {
+            "type": "header",
+            "content": "Spacing",
+            "info": "Based on Bootstrap spacing utility classes [Learn more](https://getbootstrap.com/docs/5.0/utilities/spacing/)"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding top",
+            "min": 0,
+            "max": 12,
+            "step": 1,
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding bottom",
+            "min": 0,
+            "max": 12,
+            "step": 1,
+            "default": 0
+        },
+        {
+            "type": "header",
+            "content": "Container Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "has_octo_edge",
+            "label": "Add Octo Edge",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "edge_position",
+            "label": "Edge Position",
+            "default": "top-left",
+            "options": [
+                { "value": "top-left", "label": "Top Left" },
+                { "value": "top-right", "label": "Yop Right" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "edge_color",
+            "label": "Edge Color",
+            "default": "4f0d96",
+            "options": [
+                { "value": "000000", "label": "Black" },
+                { "value": "FFFFFF", "label": "White" },
+                { "value": "F4F4F4", "label": "Gray"},
+                { "value": "4f0d96", "label": "Purple" },
+                { "value": "21eaf4", "label": "Teal" },
+                { "value": "21064e", "label": "Dark" }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Meet The Artist",
+            "category": "About"
+        }
+    ]
+}
+{% endschema %}

@@ -112,7 +112,10 @@
           "padding_top": 0,
           "padding_bottom": 0,
           "margin_top": 0,
-          "margin_bottom": 6
+          "margin_bottom": 0,
+          "has_octo_edge": true,
+          "edge_position": "bottom-right",
+          "edge_color": "F4F4F4"
         }
       },
       "161281990869fdf1c2": {
@@ -159,10 +162,10 @@
           "gutter_mobile": 2,
           "gutter_tablet": 2,
           "gutter_desktop": 1,
-          "padding_top": 8,
+          "padding_top": 0,
           "padding_bottom": 4,
           "margin_top": 0,
-          "margin_bottom": 9
+          "margin_bottom": 0
         }
       },
       "16129467980997b2cd": {
@@ -1047,6 +1050,23 @@
           "max_width": "768",
           "heading_size": "display-5"
         }
+      },
+      "162329471335fe9c81": {
+        "type": "meet-artist",
+        "settings": {
+          "heading": "Meet The Artist",
+          "subheading": "<p>Welcome to my website, my name is Iguanaz. All I do is inks, sculpt, design, weld, paint and much more!<\/p>",
+          "light_bg": true,
+          "heading_size": "h2",
+          "heading_alignment": "text-start",
+          "primary_action": "Read About me",
+          "primary_link": "shopify:\/\/pages\/about",
+          "padding_top": 0,
+          "padding_bottom": 12,
+          "has_octo_edge": true,
+          "edge_position": "top-left",
+          "edge_color": "F4F4F4"
+        }
       }
     },
     "content_for_index": [
@@ -1054,12 +1074,13 @@
       "1613036274b5bc23d7",
       "161243980752a5ed7a",
       "161281990869fdf1c2",
+      "162329471335fe9c81",
+      "16129467980997b2cd",
       "16130473820c97e316",
       "1612951102935a69c3",
       "1613034094b1e14cbd",
       "161313402064cf991c",
       "1613036565184adb1d",
-      "16129467980997b2cd",
       "16131300457e5a9b91",
       "161346609112cd0f90",
       "161368561105e641b5",
