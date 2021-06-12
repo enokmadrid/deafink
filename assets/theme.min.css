@@ -15993,6 +15993,10 @@ a:hover {
   background-color: var(--color-light) !important;
 }
 
+.bg-gray {
+  background-color: #F4F4F4 !important;
+}
+
 .text-primary {
   color: var(--color-primary) !important;
 }
@@ -16328,7 +16332,6 @@ a:hover {
 }
 
 .octo-edge {
-  position: absolute;
   z-index: 1;
 }
 .octo-edge.top-left {
@@ -16343,6 +16346,17 @@ a:hover {
 }
 .octo-edge.bottom-right {
   bottom: -1px;
+}
+
+.overlap-images {
+  min-height: 500px;
+}
+
+.about-img-sm {
+  position: relative;
+  bottom: 200px;
+  left: -150px;
+  box-shadow: 1px 3px 20px -5px rgba(0, 0, 0, 0.3);
 }
 
 .navbar {

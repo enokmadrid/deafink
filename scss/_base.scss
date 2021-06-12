@@ -48,6 +48,8 @@ a:hover {
 .bg-secondary   { background-color: var(--color-secondary) !important; }
 .bg-dark        { background-color: var(--color-dark) !important; }
 .bg-light       { background-color: var(--color-light) !important; }
+.bg-gray        { background-color: #F4F4F4 !important; }
+
 
 // Text
 .text-primary   { color: var(--color-primary) !important; }
@@ -336,4 +338,14 @@ a:hover {
     &.bottom-right {
         bottom: -1px;
     }
+}
+
+.overlap-images {
+    min-height: 500px;
+}
+.about-img-sm {
+    position: relative;
+    bottom: 200px;
+    left: -150px;
+    box-shadow: 1px 3px 20px -5px rgb(0 0 0 / 30%);
 }

@@ -38,8 +38,28 @@
                     {% endif %}
                 </div>
 
-                <div class="col col-7">
-                    <img src="https://placehold.co/600x400" alt="">
+                <div class="col col-6 ms-auto overlap-images">
+                    
+                    {% if section.settings.img_lg == blank %}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg bg-light img-fluid' }}
+                    {% else %}
+                    {% assign img_lg_size = section.settings.img_lg_width | append: 'x' | append: section.settings.img_lg_height %}
+                        <img 
+                        class="about-img-lg image-with-text-img img-fluid mb-3 mb-md-0 {% if section.settings.img_thumbnail %}img-thumbnail{% else %}rounded{% endif %}"
+                        src="{{ section.settings.img_lg | img_url: img_lg_size, crop: 'center' }}"
+                        alt="{{ section.settings.img.alt | escape }}" 
+                        width="{{ section.settings.img_lg_width }}"
+                        height="{{ section.settings.img_lg_height }}" 
+                        loading="lazy">
+                    {% assign img_sm_size = section.settings.img_sm_width | append: 'x' | append: section.settings.img_sm_height %}
+                        <img 
+                        class="about-img-sm image-with-text-img img-fluid mb-3 mb-md-0 {% if section.settings.img_thumbnail %}img-thumbnail{% else %}rounded{% endif %}"
+                        src="{{ section.settings.img_sm | img_url: img_sm_size, crop: 'center' }}"
+                        alt="{{ section.settings.img.alt | escape }}" 
+                        width="{{ section.settings.img_sm_width }}"
+                        height="{{ section.settings.img_sm_height }}" 
+                        loading="lazy">
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -112,6 +132,44 @@
         },
         {
             "type": "header",
+            "content": "Image settings"
+        },
+        {
+            "type": "image_picker",
+            "id": "img_lg",
+            "label": "Large Image"
+        },
+        {
+            "type": "text",
+            "id": "img_lg_width",
+            "label": "Image width (px)",
+            "default": "500"
+        },
+        {
+            "type": "text",
+            "id": "img_lg_height",
+            "label": "Image height (px)",
+            "default": "400"
+        },
+        {
+            "type": "image_picker",
+            "id": "img_sm",
+            "label": "Small Image"
+        },
+        {
+            "type": "text",
+            "id": "img_sm_width",
+            "label": "Image width (px)",
+            "default": "300"
+        },
+        {
+            "type": "text",
+            "id": "img_sm_height",
+            "label": "Image height (px)",
+            "default": "300"
+        },
+        {
+            "type": "header",
             "content": "Spacing",
             "info": "Based on Bootstrap spacing utility classes [Learn more](https://getbootstrap.com/docs/5.0/utilities/spacing/)"
         },
@@ -150,7 +208,7 @@
             "default": "top-left",
             "options": [
                 { "value": "top-left", "label": "Top Left" },
-                { "value": "top-right", "label": "Yop Right" }
+                { "value": "top-right", "label": "Top Right" }
             ]
         },
         {

@@ -16,7 +16,7 @@
 
 <section 
     id="collection-list-{{ section.id }}"
-    class="collection-list {% if section.settings.light_bg %}bg-light{% endif %} {{ pt }} {{ pb }} {{ mt }} {{ mb }}">
+    class="collection-list {{ section.settings.bg_color}} {% if section.settings.light_bg %}bg-light{% endif %} {{ pt }} {{ pb }} {{ mt }} {{ mb }}">
     <div class="{% if section.settings.container %}container{% else %}container-fluid{% endif %}">
 
         <div class="heading-wrapper mb-3 overflow-hidden">
@@ -144,8 +144,18 @@
         {
             "type": "checkbox",
             "id": "light_bg",
-            "label": "Light background",
-            "default": false
+            "label": "Light Background",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "bg-gray",
+            "options": [
+                {  "value": "bg-primary", "label": "Primary" },
+                {  "value": "bg-gray", "label": "Gray" }
+            ]
         },
         {
             "type": "select",
