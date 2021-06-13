@@ -436,7 +436,7 @@
             "type": "testimonial",
             "settings": {
               "text": "<p>I love KondaSoft Shopify Themes, not only they are beautiful and attractive but they are super-fast as well. I have tried different theme providers before but with KondaSoft's themes I could finish my store very quickly (within 1 week). I can recommend KondaSoft, that's for sure... A+++<\/p>",
-              "name": "John Doe",
+              "name": "Jane Doe",
               "img": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg"
             }
           },
@@ -444,7 +444,7 @@
             "type": "testimonial",
             "settings": {
               "text": "<p>I have been successfully running my store with KondaSoft's theme, KS WatchShop for 2 months now, and I'm really impressed with the performance and speed it has. The speed-rank for my Shopify store has increased dramatically after I switched to this theme...<\/p>",
-              "name": "Jane Doe",
+              "name": "Jean Doe",
               "img": "shopify:\/\/shop_images\/woman-poses-in-dark-room.jpg"
             }
           }
@@ -454,9 +454,10 @@
           "16131300457e5a9b91-1"
         ],
         "settings": {
-          "heading": "Customer testimonials",
+          "heading": "Customer Testimonials",
           "subheading": "",
           "light_bg": false,
+          "background": "bg-secondary",
           "heading_size": "h2",
           "heading_alignment": "text-center",
           "subheading_size": "",
@@ -780,6 +781,7 @@
           "heading": "F.A.Q",
           "subheading": "<p>Write something catchy for this section.<\/p>",
           "light_bg": false,
+          "bg_color": "bg-dark",
           "heading_size": "h2",
           "heading_alignment": "text-center",
           "subheading_size": "",
@@ -787,13 +789,20 @@
           "accordion_style": "",
           "padding_top": 0,
           "padding_bottom": 0,
-          "margin_top": 0,
-          "margin_bottom": 8
+          "has_octo_edge": true,
+          "edge_position": "top-left",
+          "edge_color": "4f0d96"
         }
       },
       "footer-blocks": {
         "type": "footer-blocks",
         "blocks": {
+          "52745683-6531-4b24-b8e5-515edf3d8627": {
+            "type": "image",
+            "settings": {
+              "footer_img": "shopify:\/\/shop_images\/logo_deafink_solid.png"
+            }
+          },
           "84d98f57-a71d-49ea-a1a3-3fab0b59ff64": {
             "type": "menu",
             "settings": {
@@ -825,14 +834,18 @@
           }
         },
         "block_order": [
+          "52745683-6531-4b24-b8e5-515edf3d8627",
           "84d98f57-a71d-49ea-a1a3-3fab0b59ff64",
           "b4097452-7361-46b5-8f88-a21eaccf5c63",
           "b48e216c-724c-4c80-bc75-f7380eb5756f"
         ],
         "settings": {
           "container": true,
-          "bg_color": "#21064e",
+          "bg_color": "#000000",
           "bg_style": "text-white",
+          "has_octo_edge": true,
+          "edge_position": "top-left",
+          "edge_color": "21064e",
           "row_": 1,
           "row_sm": 2,
           "row_md": 2,
@@ -842,8 +855,8 @@
           "gutter_mobile": 3,
           "gutter_tablet": 4,
           "gutter_desktop": 6,
-          "padding_top": 8,
-          "padding_bottom": 8,
+          "padding_top": 6,
+          "padding_bottom": 6,
           "margin_top": 0,
           "margin_bottom": 0
         }
@@ -852,13 +865,12 @@
         "type": "footer",
         "settings": {
           "container": true,
-          "bg_color": "#000000",
           "bg_style": "text-white",
           "show_powered_by": false,
           "show_theme_by": true,
           "show_payment_icons": true,
-          "show_sep": false,
-          "sep_color": "#000000",
+          "show_sep": true,
+          "sep_color": "#2f3030",
           "padding_top": 4,
           "padding_bottom": 4,
           "margin_top": 0,
@@ -870,7 +882,7 @@
         "disabled": true,
         "settings": {
           "container": true,
-          "bg_color": "#dee2e6",
+          "bg_color": "#21eaf4",
           "margin_top": 9,
           "margin_bottom": 7
         }
