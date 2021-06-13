@@ -469,7 +469,10 @@
           "padding_top": 0,
           "padding_bottom": 0,
           "margin_top": 0,
-          "margin_bottom": 0
+          "margin_bottom": 0,
+          "has_octo_edge": true,
+          "edge_position": "top-right",
+          "edge_color": "FFFFFF"
         }
       },
       "161313402064cf991c": {
@@ -1061,13 +1064,9 @@
           "primary_action": "Read About me",
           "primary_link": "shopify:\/\/pages\/about",
           "img_lg": "shopify:\/\/shop_images\/Asset_2.png",
-          "img_lg_width": "500",
-          "img_lg_height": "300",
           "img_sm": "shopify:\/\/shop_images\/Asset_6.png",
-          "img_sm_width": "250",
-          "img_sm_height": "250",
           "padding_top": 0,
-          "padding_bottom": 12,
+          "padding_bottom": 0,
           "has_octo_edge": true,
           "edge_position": "top-left",
           "edge_color": "F4F4F4"

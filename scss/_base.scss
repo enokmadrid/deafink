@@ -341,11 +341,64 @@ a:hover {
 }
 
 .overlap-images {
-    min-height: 500px;
+    margin-bottom: 75px;
+    
+    @include media-breakpoint-down(sm) {
+        order: -1 !important;
+        min-height: auto;
+        .about-img-sm {
+            margin: 0 auto;
+            display: block;
+            float: unset;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    @include media-breakpoint-down(xxl) {
+        max-height: 280px;
+    }
 }
 .about-img-sm {
     position: relative;
-    bottom: 150px;
-    left: -150px;
     box-shadow: 1px 3px 20px -5px rgb(0 0 0 / 30%);
+    width: 200px;
+    height: 200px;
+
+    @include media-breakpoint-up(xxl) {
+        bottom: -50%;
+        left: 20%;
+    }
+    @include media-breakpoint-down(xl) {
+        bottom: 20%;
+    }
+    @include media-breakpoint-only(xl) {
+        bottom: 25%;
+        left: 6%;
+    }
+    @include media-breakpoint-only(lg) { 
+        width: 150px;
+        height: 150px;
+    }
+    @include media-breakpoint-down(lg) { 
+        bottom: 0;
+        float: right;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.about-img-sm,
+.about-img-lg {
+    -webkit-clip-path: url(#clip-path-button);
+    clip-path: url(#clip-path-button);
+}
+
+.about-img-lg {
+    
+}
+
+.shopify-section .heading {
+    @include media-breakpoint-down(sm) {
+        font-size: 2.25rem; //36px
+    }
 }

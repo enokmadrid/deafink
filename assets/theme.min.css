@@ -16349,14 +16349,75 @@ a:hover {
 }
 
 .overlap-images {
-  min-height: 500px;
+  margin-bottom: 75px;
+}
+@media (max-width: 575.98px) {
+  .overlap-images {
+    order: -1 !important;
+    min-height: auto;
+  }
+  .overlap-images .about-img-sm {
+    margin: 0 auto;
+    display: block;
+    float: unset;
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 1399.98px) {
+  .overlap-images {
+    max-height: 280px;
+  }
 }
 
 .about-img-sm {
   position: relative;
-  bottom: 200px;
-  left: -150px;
   box-shadow: 1px 3px 20px -5px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  height: 200px;
+}
+@media (min-width: 1400px) {
+  .about-img-sm {
+    bottom: -50%;
+    left: 20%;
+  }
+}
+@media (max-width: 1199.98px) {
+  .about-img-sm {
+    bottom: 20%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .about-img-sm {
+    bottom: 25%;
+    left: 6%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .about-img-sm {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 991.98px) {
+  .about-img-sm {
+    bottom: 0;
+    float: right;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.about-img-sm,
+.about-img-lg {
+  -webkit-clip-path: url(#clip-path-button);
+  clip-path: url(#clip-path-button);
+}
+
+@media (max-width: 575.98px) {
+  .shopify-section .heading {
+    font-size: 2.25rem;
+  }
 }
 
 .navbar {

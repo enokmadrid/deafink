@@ -12,7 +12,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col col-5">
+                <div class="col col-sm-7 col-lg-5">
                     {% if section.settings.heading != blank %}
                         <div class="heading-wrapper overflow-hidden">
 
@@ -38,26 +38,22 @@
                     {% endif %}
                 </div>
 
-                <div class="col col-6 ms-auto overlap-images">
+                <div class="col col-4 col-lg-6 ms-auto overlap-images">
                     
                     {% if section.settings.img_lg == blank %}
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg bg-light img-fluid' }}
                     {% else %}
-                    {% assign img_lg_size = section.settings.img_lg_width | append: 'x' | append: section.settings.img_lg_height %}
+                    {% assign img_lg_size = 420 | append: 'x' | append: 250 %}
                         <img 
-                        class="about-img-lg image-with-text-img img-fluid mb-3 mb-md-0 {% if section.settings.img_thumbnail %}img-thumbnail{% else %}rounded{% endif %}"
+                        class="about-img-lg image-with-text-img img-fluid float-end d-none d-lg-block {% if section.settings.img_thumbnail %}img-thumbnail{% endif %}"
                         src="{{ section.settings.img_lg | img_url: img_lg_size, crop: 'center' }}"
-                        alt="{{ section.settings.img.alt | escape }}" 
-                        width="{{ section.settings.img_lg_width }}"
-                        height="{{ section.settings.img_lg_height }}" 
+                        alt="{{ section.settings.img.alt | escape }}"
                         loading="lazy">
-                    {% assign img_sm_size = section.settings.img_sm_width | append: 'x' | append: section.settings.img_sm_height %}
+                    {% assign img_sm_size = 200 | append: 'x' | append: 200 %}
                         <img 
-                        class="about-img-sm image-with-text-img img-fluid mb-3 mb-md-0 {% if section.settings.img_thumbnail %}img-thumbnail{% else %}rounded{% endif %}"
+                        class="about-img-sm image-with-text-img img-fluid {% if section.settings.img_thumbnail %}img-thumbnail{% endif %}"
                         src="{{ section.settings.img_sm | img_url: img_sm_size, crop: 'center' }}"
-                        alt="{{ section.settings.img.alt | escape }}" 
-                        width="{{ section.settings.img_sm_width }}"
-                        height="{{ section.settings.img_sm_height }}" 
+                        alt="{{ section.settings.img.alt | escape }}"
                         loading="lazy">
                     {% endif %}
                 </div>
@@ -137,36 +133,12 @@
         {
             "type": "image_picker",
             "id": "img_lg",
-            "label": "Large Image"
-        },
-        {
-            "type": "text",
-            "id": "img_lg_width",
-            "label": "Image width (px)",
-            "default": "500"
-        },
-        {
-            "type": "text",
-            "id": "img_lg_height",
-            "label": "Image height (px)",
-            "default": "400"
+            "label": "Large Image (420x250)"
         },
         {
             "type": "image_picker",
             "id": "img_sm",
-            "label": "Small Image"
-        },
-        {
-            "type": "text",
-            "id": "img_sm_width",
-            "label": "Image width (px)",
-            "default": "300"
-        },
-        {
-            "type": "text",
-            "id": "img_sm_height",
-            "label": "Image height (px)",
-            "default": "300"
+            "label": "Small Image (200x200)"
         },
         {
             "type": "header",
@@ -215,7 +187,7 @@
             "type": "select",
             "id": "edge_color",
             "label": "Edge Color",
-            "default": "4f0d96",
+            "default": "F4F4F4",
             "options": [
                 { "value": "000000", "label": "Black" },
                 { "value": "FFFFFF", "label": "White" },

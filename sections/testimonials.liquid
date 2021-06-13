@@ -12,6 +12,11 @@
 <section 
     id="testimonials-{{ section.id }}" 
     class="testimonials {% if section.settings.light_bg %}bg-light{% endif %} {{ pt }} {{ pb }} {{ mt }} {{ mb }}">
+
+    {% if section.settings.has_octo_edge == true %} 
+        <div class="{{ pt }}">{% include 'octo-edge' %}</div>
+    {% endif %}
+
     <div class="container">
 
         {% if section.settings.heading != blank or section.settings.subheading != blank %}
@@ -277,6 +282,40 @@
             "max": 12,
             "step": 1,
             "default": 7
+        },
+        {
+            "type": "header",
+            "content": "Container Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "has_octo_edge",
+            "label": "Add Octo Edge",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "edge_position",
+            "label": "Edge Position",
+            "default": "top-left",
+            "options": [
+                { "value": "top-left", "label": "Top Left" },
+                { "value": "top-right", "label": "Top Right" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "edge_color",
+            "label": "Edge Color",
+            "default": "FFFFFF",
+            "options": [
+                { "value": "000000", "label": "Black" },
+                { "value": "FFFFFF", "label": "White" },
+                { "value": "F4F4F4", "label": "Gray"},
+                { "value": "4f0d96", "label": "Purple" },
+                { "value": "21eaf4", "label": "Teal" },
+                { "value": "21064e", "label": "Dark" }
+            ]
         }
     ],
     "blocks": [
