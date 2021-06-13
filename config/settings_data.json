@@ -143,6 +143,7 @@
           "subheading": "<p> <\/p>",
           "container": true,
           "light_bg": true,
+          "bg_color": "bg-gray",
           "heading_size": "h2",
           "heading_alignment": "text-left",
           "subheading_size": "",
@@ -170,6 +171,7 @@
       },
       "16129467980997b2cd": {
         "type": "image-with-text",
+        "disabled": true,
         "settings": {
           "container": true,
           "light_bg": false,
@@ -194,6 +196,7 @@
       },
       "1612951102935a69c3": {
         "type": "image-with-text-overlay",
+        "disabled": true,
         "settings": {
           "container": false,
           "section_height": "section-height-md",
@@ -217,6 +220,7 @@
       },
       "1613034094b1e14cbd": {
         "type": "logo-list",
+        "disabled": true,
         "blocks": {
           "e1cf75d0-157b-4a2e-a182-2e4a6d5ef5a0": {
             "type": "logo",
@@ -383,6 +387,7 @@
       },
       "16130473820c97e316": {
         "type": "featured-product",
+        "disabled": true,
         "settings": {
           "product": "tattoo-appointment-reservation",
           "container": true,
@@ -430,34 +435,28 @@
           "16131300457e5a9b91-0": {
             "type": "testimonial",
             "settings": {
-              "text": "<p>I love KondaSoft Shopify Themes, not only they are beautiful and attractive but they are super-fast as well. I have tried different theme providers before but with KondaSoft&#x27;s themes I could finish my store very quickly (within 1 week). I can recommend KondaSoft, that&#x27;s for sure... A+++<\/p>",
-              "name": "John Doe"
+              "text": "<p>I love KondaSoft Shopify Themes, not only they are beautiful and attractive but they are super-fast as well. I have tried different theme providers before but with KondaSoft's themes I could finish my store very quickly (within 1 week). I can recommend KondaSoft, that's for sure... A+++<\/p>",
+              "name": "John Doe",
+              "img": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg"
             }
           },
           "16131300457e5a9b91-1": {
             "type": "testimonial",
             "settings": {
-              "text": "<p>I have been successfully running my store with KondaSoft&#x27;s theme, KS WatchShop for 2 months now, and I&#x27;m really impressed with the performance and speed it has. The speed-rank for my Shopify store has increased dramatically after I switched to this theme...<\/p>",
-              "name": "Jane Doe"
-            }
-          },
-          "16131300457e5a9b91-2": {
-            "type": "testimonial",
-            "settings": {
-              "text": "<p>I thought to try KondaSoft Themes for one of my new Ecommerce adventures (a gift shop for my fiancé) and oh i was really blown away by the performance. They are just fast. Also, their themes have many sections available so that i can adjust the homepage exactly as I want to....<\/p>",
-              "name": "Jim Doe"
+              "text": "<p>I have been successfully running my store with KondaSoft's theme, KS WatchShop for 2 months now, and I'm really impressed with the performance and speed it has. The speed-rank for my Shopify store has increased dramatically after I switched to this theme...<\/p>",
+              "name": "Jane Doe",
+              "img": "shopify:\/\/shop_images\/woman-poses-in-dark-room.jpg"
             }
           }
         },
         "block_order": [
           "16131300457e5a9b91-0",
-          "16131300457e5a9b91-1",
-          "16131300457e5a9b91-2"
+          "16131300457e5a9b91-1"
         ],
         "settings": {
           "heading": "Customer testimonials",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
-          "light_bg": true,
+          "subheading": "",
+          "light_bg": false,
           "heading_size": "h2",
           "heading_alignment": "text-center",
           "subheading_size": "",
@@ -1061,6 +1060,12 @@
           "heading_alignment": "text-start",
           "primary_action": "Read About me",
           "primary_link": "shopify:\/\/pages\/about",
+          "img_lg": "shopify:\/\/shop_images\/Asset_2.png",
+          "img_lg_width": "500",
+          "img_lg_height": "300",
+          "img_sm": "shopify:\/\/shop_images\/Asset_6.png",
+          "img_sm_width": "250",
+          "img_sm_height": "250",
           "padding_top": 0,
           "padding_bottom": 12,
           "has_octo_edge": true,
@@ -1075,13 +1080,13 @@
       "161243980752a5ed7a",
       "161281990869fdf1c2",
       "162329471335fe9c81",
+      "16131300457e5a9b91",
       "16129467980997b2cd",
       "16130473820c97e316",
       "1612951102935a69c3",
       "1613034094b1e14cbd",
       "161313402064cf991c",
       "1613036565184adb1d",
-      "16131300457e5a9b91",
       "161346609112cd0f90",
       "161368561105e641b5",
       "1613321883059203ae",
