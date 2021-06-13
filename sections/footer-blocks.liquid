@@ -1,6 +1,6 @@
 {% if section.blocks.size > 0 %}
 
-    {% assign pt = section.settings.padding_top | prepend: 'pt-' %}
+    {% assign pt = section.settings.padding_top | prepend: 'pb-' %}
     {% assign pb = section.settings.padding_bottom | prepend: 'pb-' %}
     {% assign mt = section.settings.margin_top | prepend: 'mt-' %}
     {% assign mb = section.settings.margin_bottom | prepend: 'mb-' %}
@@ -18,8 +18,13 @@
 
     <section 
         id="footer-blocks" 
-        class="overflow-hidden {{ pt }} {{ pb }} {{ mt }} {{ mb }} {{ section.settings.bg_style }}"
+        class="overflow-hidden {{ section.settings.bg_style }} {{ pb }} {{ mt }} {{ mb }} "
         style="{{ section.settings.bg_color | prepend: 'background-color: ' | append: ';' }}">
+
+        {% if section.settings.has_octo_edge == true %} 
+            <div class="{{ pt }}">{% include 'octo-edge' %}</div>
+        {% endif %}
+
         <div class="{% if section.settings.container %}container{% else %}container-fluid{% endif %}">
 
             <ul class="footer-blocks-grid list-unstyled row {{ row_ }} {{ row_sm }} {{ row_md }} {{ row_lg }} {{ row_xl }} {{ row_xxl }} {{ gutter_mobile }} {{ gutter_tablet }} {{ gutter_desktop }}">
@@ -34,6 +39,12 @@
                                 {{ block.settings.heading | escape }}
                             </h3>
                         {% endunless %}
+
+                        {% if block.type == 'image' %}
+                            <div class="rte">
+                                <img src="{{ block.settings.footer_img | img_url: 'large' }}" alt="">
+                            </div>
+                        {% endif %}
                             
                         {% if block.type == 'richtext' %}
                             <div class="rte">
@@ -105,7 +116,7 @@
             "type": "color",
             "id": "bg_color",
             "label": "Background color",
-            "default": "#343a40"
+            "default": "#000000"
         },
         {
             "type": "select",
@@ -116,6 +127,40 @@
                 { "value": "text-white", "label": "Dark" }
             ],
             "default": "text-white"
+        },
+        {
+            "type": "header",
+            "content": "Container Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "has_octo_edge",
+            "label": "Add Octo Edge",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "edge_position",
+            "label": "Edge Position",
+            "default": "top-left",
+            "options": [
+                { "value": "top-left", "label": "Top Left" },
+                { "value": "top-right", "label": "Top Right" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "edge_color",
+            "label": "Edge Color",
+            "default": "21064e",
+            "options": [
+                { "value": "000000", "label": "Black" },
+                { "value": "FFFFFF", "label": "White" },
+                { "value": "F4F4F4", "label": "Gray"},
+                { "value": "4f0d96", "label": "Purple" },
+                { "value": "21eaf4", "label": "Teal" },
+                { "value": "21064e", "label": "Dark" }
+            ]
         },
         {
             "type": "header",
@@ -251,6 +296,18 @@
         }
     ],
     "blocks": [
+        {
+            "type": "image",
+            "name": "Image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "footer_img",
+                    "label": "Logo image",
+                    "info": "Leave empty to disable"
+                }
+            ]
+        },
         {
             "type": "richtext",
             "name": "Richtext",

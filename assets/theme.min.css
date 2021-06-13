@@ -6147,9 +6147,9 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: center;
   width: 15%;
-  color: #fff;
+  color: var(--color-primary);
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.9;
   transition: opacity 0.15s ease;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -6161,10 +6161,10 @@ textarea.form-control-lg {
 .carousel-control-prev:hover, .carousel-control-prev:focus,
 .carousel-control-next:hover,
 .carousel-control-next:focus {
-  color: #fff;
+  color: var(--color-primary);
   text-decoration: none;
   outline: 0;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .carousel-control-prev {
@@ -6178,11 +6178,11 @@ textarea.form-control-lg {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   background-repeat: no-repeat;
   background-position: 50%;
-  background-size: 100% 100%;
+  background-size: 50% 50%;
 }
 
 /* rtl:options: {
@@ -6194,11 +6194,15 @@ textarea.form-control-lg {
   } ]
 } */
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231499ED'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  background-color: white;
+  border-radius: 50%;
 }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231499ED'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-color: white;
+  border-radius: 50%;
 }
 
 .carousel-indicators {
@@ -6219,16 +6223,16 @@ textarea.form-control-lg {
   flex: 0 1 auto;
   width: 30px;
   height: 3px;
-  margin-right: 3px;
-  margin-left: 3px;
+  margin-right: 4px;
+  margin-left: 4px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
   background-clip: padding-box;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   opacity: 0.5;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-indicators li {
@@ -6252,13 +6256,13 @@ textarea.form-control-lg {
 
 .carousel-dark .carousel-control-prev-icon,
 .carousel-dark .carousel-control-next-icon {
-  filter: invert(1) grayscale(100);
+  filter: none;
 }
 .carousel-dark .carousel-indicators li {
-  background-color: #000;
+  background-color: #d200da;
 }
 .carousel-dark .carousel-caption {
-  color: #000;
+  color: black;
 }
 
 @keyframes spinner-border {
@@ -16336,9 +16340,11 @@ a:hover {
 }
 .octo-edge.top-left {
   transform: scale(-1, -1);
+  margin-top: -1px;
 }
 .octo-edge.top-right {
   transform: scaleY(-1);
+  margin-top: -1px;
 }
 .octo-edge.bottom-left {
   bottom: -1px;
@@ -16389,7 +16395,7 @@ a:hover {
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .about-img-sm {
-    bottom: 25%;
+    bottom: 35%;
     left: 6%;
   }
 }

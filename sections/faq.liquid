@@ -1,4 +1,4 @@
-{% assign pt = section.settings.padding_top | prepend: 'pt-' %}
+{% assign pt = section.settings.padding_top | prepend: 'pb-' %}
 {% assign pb = section.settings.padding_bottom | prepend: 'pb-' %}
 {% assign mt = section.settings.margin_top | prepend: 'mt-' %}
 {% assign mb = section.settings.margin_bottom | prepend: 'mb-' %}
@@ -11,7 +11,12 @@
 
 <section 
     id="faq-{{ section.id }}" 
-    class="faq {% if section.settings.light_bg %}bg-light{% endif %} {{ pt }} {{ pb }} {{ mt }} {{ mb }}">
+    class="faq {% if section.settings.light_bg %}bg-light{% endif %} {{ section.settings.bg_color}} {{ pb }} {{ mt }} {{ mb }}">
+
+    {% if section.settings.has_octo_edge == true %} 
+        <div class="{{ pt }}">{% include 'octo-edge' %}</div>
+    {% endif %}
+
     <div 
         class="container"
         style="{{ max_width }}">
@@ -102,6 +107,19 @@
         },
         {
             "type": "select",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "bg-dark",
+            "options": [
+                {  "value": "bg-primary", "label": "Primary" },
+                {  "value": "bg-secondary", "label": "Secondary" },
+                {  "value": "bg-dark", "label": "Dark" },
+                {  "value": "bg-gray", "label": "Gray" },
+                {  "value": "bg-light", "label": "light" }
+            ]
+        },
+        {
+            "type": "select",
             "id": "heading_size",
             "label": "Heading Size",
             "default": "h2",
@@ -176,22 +194,38 @@
             "default": 0
         },
         {
-            "type": "range",
-            "id": "margin_top",
-            "label": "Margin top",
-            "min": 0,
-            "max": 12,
-            "step": 1,
-            "default": 0
+            "type": "header",
+            "content": "Container Settings"
         },
         {
-            "type": "range",
-            "id": "margin_bottom",
-            "label": "Margin bottom",
-            "min": 0,
-            "max": 12,
-            "step": 1,
-            "default": 7
+            "type": "checkbox",
+            "id": "has_octo_edge",
+            "label": "Add Octo Edge",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "edge_position",
+            "label": "Edge Position",
+            "default": "top-left",
+            "options": [
+                { "value": "top-left", "label": "Top Left" },
+                { "value": "top-right", "label": "Top Right" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "edge_color",
+            "label": "Edge Color",
+            "default": "4f0d96",
+            "options": [
+                { "value": "000000", "label": "Black" },
+                { "value": "FFFFFF", "label": "White" },
+                { "value": "F4F4F4", "label": "Gray"},
+                { "value": "4f0d96", "label": "Purple" },
+                { "value": "21eaf4", "label": "Teal" },
+                { "value": "21064e", "label": "Dark" }
+            ]
         }
     ],
     "blocks": [

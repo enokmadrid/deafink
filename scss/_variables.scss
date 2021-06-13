@@ -41,3 +41,29 @@ h1, .h1 { font-size: $h1-font-size !important; }
 $btn-font-size-lg:            12px !default;
 $btn-padding-y-lg:            1rem !default;
 $btn-padding-x-lg:            2rem !default;
+
+
+
+// Carousel
+$carousel-control-color:             var(--color-primary) !default;
+$carousel-control-opacity:           0.9 !default;
+$carousel-control-hover-opacity:     1 !default;
+$carousel-control-transition:        opacity .15s ease !default;
+
+$carousel-indicator-width:           30px !default;
+$carousel-indicator-height:          3px !default;
+$carousel-indicator-hit-area-height: 10px !default;
+$carousel-indicator-spacer:          4px !default;
+$carousel-indicator-opacity:         0.5 !default;
+$carousel-indicator-active-bg:       rgba(0,0,0,0.1) !default;
+$carousel-indicator-active-opacity:  1 !default;
+$carousel-indicator-transition:      opacity .6s ease-in-out !default;
+
+$carousel-control-icon-width:        3rem !default;
+
+$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#1499ED'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !default;
+$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#1499ED'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !default;
+
+$carousel-dark-indicator-active-bg:  rgb(210, 0, 218) !default;
+$carousel-dark-caption-color:        black !default;
+$carousel-dark-control-icon-filter:  none !default;

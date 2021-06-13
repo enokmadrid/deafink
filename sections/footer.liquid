@@ -5,8 +5,7 @@
 
 <footer 
     id="footer" 
-    class="overflow-hidden {{ mt }} {{ mb }} {{ section.settings.bg_style }}"
-    style="{{ section.settings.bg_color | prepend: 'background-color: ' | append: ';' }}">
+    class="overflow-hidden {{ section.settings.bg_style }} {{ mt }} {{ mb }} ">
 
     {% if section.settings.show_sep %}
         <hr 
@@ -99,12 +98,6 @@
             "id": "container",
             "label": "Wrap in a container",
             "default": true
-        },
-        {
-            "type": "color",
-            "id": "bg_color",
-            "label": "Background color",
-            "default": "#343a40"
         },
         {
             "type": "select",

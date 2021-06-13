@@ -1,4 +1,4 @@
-{% assign pt = section.settings.padding_top | prepend: 'pt-' %}
+{% assign pt = section.settings.padding_top | prepend: 'pb-' %}
 {% assign pb = section.settings.padding_bottom | prepend: 'pb-' %}
 {% assign mt = section.settings.margin_top | prepend: 'mt-' %}
 {% assign mb = section.settings.margin_bottom | prepend: 'mb-' %}
@@ -11,7 +11,7 @@
 
 <section 
     id="testimonials-{{ section.id }}" 
-    class="testimonials {% if section.settings.light_bg %}bg-light{% endif %} {{ pt }} {{ pb }} {{ mt }} {{ mb }}">
+    class="testimonials {{ section.settings.background }} {% if section.settings.light_bg %}bg-light{% endif %} {{ pb }} {{ mt }} {{ mb }}">
 
     {% if section.settings.has_octo_edge == true %} 
         <div class="{{ pt }}">{% include 'octo-edge' %}</div>
@@ -23,7 +23,7 @@
             <div class="heading-wrapper mb-2 overflow-hidden">
 
                 {% unless section.settings.heading == blank %}
-                    <h2 class="heading mb-1 {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}">
+                    <h2 class="heading mb-10 {{ section.settings.heading_alignment }} {{ section.settings.heading_size }}">
                         {{ section.settings.heading }}
                     </h2>
                 {% endunless %}
@@ -155,6 +155,18 @@
             "id": "light_bg",
             "label": "Light background",
             "default": false
+        },
+        {
+            "type": "select",
+            "id": "background",
+            "label": "Background color",
+            "default": "bg-secondary",
+            "options": [
+                {  "value": "bg-dark", "label": "Dark" },
+                {  "value": "bg-light", "label": "Light" },
+                {  "value": "bg-primary", "label": "Primary Color" },
+                {  "value": "bg-secondary", "label": "Secondary Color" }
+            ]
         },
         {
             "type": "select",
