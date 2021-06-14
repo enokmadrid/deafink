@@ -4842,6 +4842,23 @@ textarea.form-control-lg {
   border-bottom-left-radius: 0;
 }
 
+.bg-dark .accordion-body p {
+  opacity: 0.5;
+}
+.bg-dark .accordion-button:not(.collapsed) {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.bg-dark .accordion-button:not(.collapsed)::after {
+  filter: invert(1);
+}
+.bg-dark .accordion-button {
+  font-weight: bold;
+}
+.bg-dark .accordion-button.collapsed {
+  color: white;
+  background-color: none;
+}
+
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;

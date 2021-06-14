@@ -782,13 +782,13 @@
         ],
         "settings": {
           "heading": "F.A.Q",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
+          "subheading": "<p> <\/p>",
           "light_bg": false,
           "bg_color": "bg-dark",
           "heading_size": "h2",
           "heading_alignment": "text-center",
           "subheading_size": "",
-          "max_width": "768",
+          "max_width": "800",
           "accordion_style": "",
           "padding_top": 0,
           "padding_bottom": 0,
@@ -811,7 +811,7 @@
             "settings": {
               "menu": "main-menu",
               "heading": "Quick links",
-              "heading_size": "h5",
+              "heading_size": "h4",
               "direction": "flex-column"
             }
           },
@@ -820,7 +820,7 @@
             "settings": {
               "menu": "store",
               "heading": "Store",
-              "heading_size": "h5",
+              "heading_size": "h4",
               "direction": "flex-column"
             }
           },
@@ -829,7 +829,7 @@
             "settings": {
               "menu": "",
               "heading": "Contact Me",
-              "heading_size": "h5",
+              "heading_size": "h4",
               "direction": "flex-column",
               "icon_size": "18",
               "show_only_icons": false
