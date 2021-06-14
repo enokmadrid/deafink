@@ -16,6 +16,14 @@
     {% assign gutter_tablet  = section.settings.gutter_tablet | prepend: 'g-sm-' %}
     {% assign gutter_desktop = section.settings.gutter_desktop | prepend: 'g-xl-' %}
 
+    {% if settings.social_twitter_link != blank 
+        or settings.social_facebook_link != blank 
+        or settings.social_instagram_link != blank 
+        or settings.social_youtube_link != blank %}
+        {% assign social_icons = true %}
+        {% assign socials = "Facebook Twitter Instagram YouTube" | split: ' '%}
+    {% endif %}
+
     <section 
         id="footer-blocks" 
         class="overflow-hidden {{ section.settings.bg_style }} {{ pb }} {{ mt }} {{ mb }} "
@@ -70,22 +78,22 @@
 
                         {% if block.type == 'social_menu' %}
                             <div class="social-menu">
-                                <ul class="nav mb-4 {{ block.settings.direction }}">
-                                    {% for link in linklists[block.settings.menu].links %}
-                                        <li class="nav-item">
-                                            <a 
-                                                class="nav-link d-inline-flex align-items-center" 
-                                                href="{{ link.url }}">
-                                                {% render 'social-icons' with icon: link.url, size: block.settings.icon_size, class: 'mx-n2' %}
-                                                {% if block.settings.show_only_icons == false %}
-                                                    <span class="ms-4">
-                                                        {{ link.title }}
-                                                    </span>
-                                                {% endif %}
-                                            </a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
+
+                                {% if social_icons %}
+                                    <ul class="social-icons px-0 pt-4">
+                                        {% for social in socials %}
+                                            {% assign social_link = social | prepend: 'social_' | append: '_link' | downcase %}
+                                            {% if settings[social_link] != blank %}
+                                                <li class="social-icons__item">
+                                                    <a class="social-icons__link" href="{{ settings[social_link] | escape }}" target="_blank" aria-describedby="a11y-external-message">
+                                                        <i class="fab fa-{{ social | downcase }} fa-2x"></i>
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+
                             </div>
                         {% endif %}
 
@@ -384,7 +392,6 @@
         {
             "type": "social_menu",
             "name": "Social menu",
-            "limit": 1,
             "settings": [
                 {
                     "type": "link_list",

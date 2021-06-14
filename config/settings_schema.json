@@ -182,6 +182,34 @@
                 "id": "share_email",
                 "label": "Send via Email",
                 "default": true
+            },
+            {
+                "type": "header",
+                "content": "Social accounts"
+            },
+            {
+                "type": "text",
+                "id": "social_twitter_link",
+                "label": "Twitter",
+                "info": "https:\/\/twitter.com\/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social_instagram_link",
+                "label": "Instagram",
+                "info": "https:\/\/instagram.com\/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social_facebook_link",
+                "label": "Facebook",
+                "info": "https:\/\/facebook.com\/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social_youtube_link",
+                "label": "Youtube",
+                "info": "https:\/\/youtube.com\/shopify"
             }
         ]
     },

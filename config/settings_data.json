@@ -12,6 +12,9 @@
     "font_headings": "open_sans_n4",
     "minicart_img_width": "75",
     "minicart_img_height": "75",
+    "social_twitter_link": "https:\/\/twitter.com\/deafink",
+    "social_instagram_link": "https:\/\/instagram.com\/deafink",
+    "social_facebook_link": "https:\/\/facebook.com\/deafink",
     "minicart_style": "",
     "sections": {
       "navbar": {
@@ -803,16 +806,25 @@
               "footer_img": "shopify:\/\/shop_images\/logo_deafink_solid.png"
             }
           },
+          "b48e216c-724c-4c80-bc75-f7380eb5756f": {
+            "type": "menu",
+            "settings": {
+              "menu": "main-menu",
+              "heading": "Quick links",
+              "heading_size": "h5",
+              "direction": "flex-column"
+            }
+          },
           "84d98f57-a71d-49ea-a1a3-3fab0b59ff64": {
             "type": "menu",
             "settings": {
-              "menu": "footer",
-              "heading": "Info",
+              "menu": "store",
+              "heading": "Store",
               "heading_size": "h5",
-              "direction": ""
+              "direction": "flex-column"
             }
           },
-          "b4097452-7361-46b5-8f88-a21eaccf5c63": {
+          "91fd7bc5-756c-4a9d-8db5-0e961c40dc29": {
             "type": "social_menu",
             "settings": {
               "menu": "",
@@ -822,22 +834,13 @@
               "icon_size": "18",
               "show_only_icons": false
             }
-          },
-          "b48e216c-724c-4c80-bc75-f7380eb5756f": {
-            "type": "menu",
-            "settings": {
-              "menu": "main-menu",
-              "heading": "Quick links",
-              "heading_size": "h5",
-              "direction": "flex-column"
-            }
           }
         },
         "block_order": [
           "52745683-6531-4b24-b8e5-515edf3d8627",
+          "b48e216c-724c-4c80-bc75-f7380eb5756f",
           "84d98f57-a71d-49ea-a1a3-3fab0b59ff64",
-          "b4097452-7361-46b5-8f88-a21eaccf5c63",
-          "b48e216c-724c-4c80-bc75-f7380eb5756f"
+          "91fd7bc5-756c-4a9d-8db5-0e961c40dc29"
         ],
         "settings": {
           "container": true,

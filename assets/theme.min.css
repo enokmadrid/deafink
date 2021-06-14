@@ -16426,6 +16426,39 @@ a:hover {
   }
 }
 
+.social-icons__item {
+  display: inline-block;
+  list-style: none;
+  padding-right: 16px;
+}
+.social-icons__item .social-icons__link {
+  background-color: #2A274C;
+  border-radius: 50%;
+  line-height: 56px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.8;
+  transition: all 150ms ease-in-out;
+}
+.social-icons__item .social-icons__link:hover {
+  opacity: 1;
+}
+.social-icons__item .social-icons__link .fab {
+  color: var(--color-primary);
+  font-size: 22px;
+}
+
+.footer-blocks-grid h3, .footer-blocks-grid .h3 {
+  color: var(--color-primary);
+  padding-bottom: 16px;
+  font-family: "burtons_nightmareregular";
+}
+.footer-blocks-grid .nav-link {
+  padding-left: 0;
+}
+
 .navbar {
   height: 80px;
 }
