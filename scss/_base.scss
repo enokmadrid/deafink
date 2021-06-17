@@ -267,6 +267,7 @@ a:hover {
 // Accordion
 .accordion {
     .accordion-button {
+        font-size: 1.75rem;
         &:focus {
             border-color: var(--color-primary-alpha-25);
             box-shadow: 0 0 0 0.25rem var(--color-primary-alpha-25);

@@ -9,7 +9,7 @@
 {% assign gutter_tablet  = section.settings.gutter_tablet | prepend: 'g-sm-' %}
 {% assign gutter_desktop = section.settings.gutter_desktop | prepend: 'g-xl-' %}
 
-<ul class="items-grid list-unstyled row {{ row_ }} {{ row_sm }} {{ row_md }} {{ row_lg }} {{ row_xl }} {{ row_xxl }} {{ gutter_mobile }} {{ gutter_tablet }} {{ gutter_desktop }}">
+<ul class="items-grid list-unstyled row pt-8 {{ row_ }} {{ row_sm }} {{ row_md }} {{ row_lg }} {{ row_xl }} {{ row_xxl }} {{ gutter_mobile }} {{ gutter_tablet }} {{ gutter_desktop }}">
 
     {% for item in items limit: limit %}
         {% if item.object_type == 'product' %}
@@ -138,7 +138,7 @@
     {% else %}
 
         {% for i in (1..section.settings.limit) %}
-            <li class="product-item col px-2 py-2 text-center">
+            <li class="product-item col px-2 py-2">
                 <div class="position-relative img-thumbnail mb-2">
                     {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
                     {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg product-item-img bg-light img-fluid' }}

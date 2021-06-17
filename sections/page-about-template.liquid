@@ -5,38 +5,38 @@
 {% endcapture %}
 
 <article class="">
+    <section style="
+    background:url({{ section.settings.img | img_url: img_size, crop: 'right' }}) {{ settings.color_secondary }};
+    background-size: {{ section.settings.img_size }}%;
+    background-blend-mode: color-dodge;
+    background-position: {{ section.settings.img_position_y }} {{ section.settings.img_position_x }};
+    background-repeat: no-repeat;">
+        <div class="container mx-auto">
 
-    <div 
-        class="container mx-auto"
-        style="{{ max_width }}">
+            <!-- Header -->
+            <header class="heading-wrapper pt-12 pb-12 overflow-hidden">
 
-        <!-- Image -->
-        {% unless section.settings.img == blank %}
-            {% assign img_size = section.settings.img_width | append: 'x' | append: section.settings.img_height %}
-            <img 
-                class="img-fluid mb-5 {% if section.settings.img_thumbnail %}img-thumbnail{% else %}rounded{% endif %}" 
-                src="{{ section.settings.img | img_url: img_size, crop: 'center' }}" 
-                alt="{{ section.settings.img.alt }}"
-                width="{{ section.settings.img_width }}" 
-                height="{{ section.settings.img_height }}">
-        {% endunless %}
+                <!-- Heading -->
+                <h1 class="heading {{ section.settings.heading_size }}">
+                    {{ page.title }}
+                </h1>
 
-        <!-- Header -->
-        <header class="heading-wrapper mb-2 overflow-hidden text-center">
+            </header>
+        </div>  
+    </section>
+    <section class="bg-light">
+        <div class="container mx-auto" style="{{ max_width }}">
 
-            <!-- Heading -->
-            <h1 class="heading {{ section.settings.heading_size }}">
-                {{ page.title }}
-            </h1>
+            <!-- Description -->
+            <div class="description rte py-10">
+                {{ page.content }}
+            </div>
 
-        </header>
-
-        <!-- Description -->
-        <div class="description rte">
-            {{ page.content }}
         </div>
-
-    </div>
+        {% if section.settings.has_octo_edge == true %} 
+            {% include 'octo-edge' %}
+        {% endif %}
+    </section>
 </article>
 
 {% schema %}
@@ -52,13 +52,13 @@
             "id": "max_width",
             "label": "Content max-width (px)",
             "info": "Adjust post content width (in pixels). Leave empty to use the container.",
-            "default": "768"
+            "default": "960"
         },
         {
             "type": "select",
             "id": "heading_size",
             "label": "Heading size",
-            "default": "display-5",
+            "default": "h2",
             "options": [
                 { "group": "Display", "value": "display-1", "label": "Display 1" },
                 { "group": "Display", "value": "display-2", "label": "Display 2" },
@@ -84,22 +84,68 @@
             "label": "Image"
         },
         {
-            "type": "text",
-            "id": "img_width",
-            "label": "Image width (px)",
-            "default": "1200"
+            "type": "range",
+            "id": "img_size",
+            "label": "Image Size",
+            "min": 10,
+            "max": 100,
+            "step": 10,
+            "unit": "%",
+            "label": "Image size",
+            "default": 50
         },
         {
-            "type": "text",
-            "id": "img_height",
-            "label": "Image height (px)",
-            "default": "675"
+            "type": "select",
+            "id": "img_position_y",
+            "label": "Image Position Vertical",
+            "default": "top",
+            "options": [
+                { "value": "top", "label": "Top" },
+                { "value": "center", "label": "Center" },
+                { "value": "bottom", "label": "Bottom" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "img_position_x",
+            "label": "Image Position Horizontal",
+            "default": "right",
+            "options": [
+                { "value": "left", "label": "Left" },
+                { "value": "center", "label": "Center" },
+                { "value": "right", "label": "Right" }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Container Settings"
         },
         {
             "type": "checkbox",
-            "id": "img_thumbnail",
-            "label": "Image border",
+            "id": "has_octo_edge",
+            "label": "Add Octo Edge",
             "default": true
+        },
+        {
+            "type": "select",
+            "id": "edge_position",
+            "label": "Edge Position",
+            "default": "bottom-left",
+            "options": [
+                { "value": "bottom-left", "label": "Bottom Left" },
+                { "value": "bottom-right", "label": "Bottom Right" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "edge_color",
+            "label": "Edge Color",
+            "default": "000000",
+            "options": [
+                { "value": "000000", "label": "Black" },
+                { "value": "FFFFFF", "label": "White" },
+                { "value": "F4F4F4", "label": "Gray"}
+            ]
         }
     ]
 }

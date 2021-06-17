@@ -51,8 +51,26 @@
             {
                 "type": "color",
                 "id": "color_body_text",
-                "label": "Text",
-                "default": "#212529"
+                "label": "Body Text on Dark",
+                "default": "#FFFFFF" 
+            },
+            {
+                "type": "color",
+                "id": "color_body_text_light",
+                "label": "Body Text on Light",
+                "default": "#626372" 
+            },
+            {
+                "type": "color",
+                "id": "color_body_primary_light",
+                "label": "Primary Text on Light",
+                "default": "#1499ED" 
+            },
+            {
+                "type": "color",
+                "id": "color_body_secondary_light",
+                "label": "Secondary Text on Light",
+                "default": "#4F0D96" 
             },
             {
                 "type": "header",

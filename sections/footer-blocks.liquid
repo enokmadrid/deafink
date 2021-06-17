@@ -29,8 +29,10 @@
         class="overflow-hidden {{ section.settings.bg_style }} {{ pb }} {{ mt }} {{ mb }} "
         style="{{ section.settings.bg_color | prepend: 'background-color: ' | append: ';' }}">
 
-        {% if section.settings.has_octo_edge == true %} 
-            <div class="{{ pt }}">{% include 'octo-edge' %}</div>
+        {% if template.name == "index" %}
+            {% if section.settings.has_octo_edge == true %} 
+                <div class="{{ pt }}">{% include 'octo-edge' %}</div>
+            {% endif %}
         {% endif %}
 
         <div class="{% if section.settings.container %}container{% else %}container-fluid{% endif %}">

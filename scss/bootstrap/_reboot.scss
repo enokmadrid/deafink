@@ -105,6 +105,16 @@ hr:not([size]) {
   color: $headings-color;
 }
 
+%subheading {
+  margin-top: 0; // 1
+  margin-bottom: $headings-margin-bottom;
+  font-family: $subheadings-font-family;
+  font-style: $headings-font-style;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
 h1 {
   @extend %heading;
   @include font-size($h1-font-size);
@@ -121,18 +131,18 @@ h3 {
 }
 
 h4 {
-  @extend %heading;
-  @include font-size($h4-font-size);
+  @extend %subheading;
+  @include font-size($h4-font-size + 0.5rem);
 }
 
 h5 {
-  @extend %heading;
-  @include font-size($h5-font-size);
+  @extend %subheading;
+  @include font-size($h5-font-size + 0.5rem);
 }
 
 h6 {
-  @extend %heading;
-  @include font-size($h6-font-size);
+  @extend %subheading;
+  @include font-size($h6-font-size + 0.5rem);
 }
 
 

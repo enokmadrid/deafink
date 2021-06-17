@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 @font-face {
     font-family: 'burtons_nightmareregular';
     src: url('nitemare-webfont.woff2') format('woff2'),
@@ -18,10 +19,21 @@
     font-style: normal;
 }
 
-.h1, .h2, .h3 {
-    font-family: 'burtons_nightmareregular' !important;
+.rte {
+    p { line-height: 32px; }
 }
 
-.bg-light .heading {
-    color: var(--color-secondary);
+.bg-light {
+    h1, .h1, h2, .h2, h3, .h3,
+    .heading,
+    .collection-list-item-title {
+        color: var(--color-secondary);
+    }
+    .rte {
+        color: var(--color-body-text-light);
+        h4 {
+            color: var(--color-body-primary-light);
+            letter-spacing: 6.4px;
+        }
+    }
 }

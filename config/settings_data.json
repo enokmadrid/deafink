@@ -6,6 +6,7 @@
     "color_light": "#ffffff",
     "color_body_bg": "#000000",
     "color_body_text": "#ffffff",
+    "color_body_secondary_light": "#4f0d96",
     "color_price": "#21eaf4",
     "color_badge_sold_out": "#1499ed",
     "color_badge_sale": "#4f0d96",
@@ -847,7 +848,7 @@
           "bg_color": "#000000",
           "bg_style": "text-white",
           "has_octo_edge": true,
-          "edge_position": "top-left",
+          "edge_position": "top-right",
           "edge_color": "21064e",
           "row_": 1,
           "row_sm": 2,
@@ -988,12 +989,15 @@
       "page-about-template": {
         "type": "page-about-template",
         "settings": {
-          "max_width": "768",
-          "heading_size": "display-5",
-          "img": "shopify:\/\/shop_images\/lifestyle-1.jpg",
+          "max_width": "775",
+          "heading_size": "h2",
+          "img": "shopify:\/\/shop_images\/hero_0a060c04-e4a9-40c6-833b-174e16c695d7.png",
           "img_width": "1200",
           "img_height": "675",
-          "img_thumbnail": true
+          "img_thumbnail": false,
+          "has_octo_edge": true,
+          "edge_position": "bottom-right",
+          "edge_color": "000000"
         }
       },
       "search-template": {
