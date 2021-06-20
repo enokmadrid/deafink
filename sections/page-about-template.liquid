@@ -4,7 +4,7 @@
     {% endunless %}
 {% endcapture %}
 
-<article class="">
+<article>
     <section style="
     background:url({{ section.settings.img | img_url: img_size, crop: 'right' }}) {{ settings.color_secondary }};
     background-size: {{ section.settings.img_size }}%;
@@ -14,7 +14,7 @@
         <div class="container mx-auto">
 
             <!-- Header -->
-            <header class="heading-wrapper pt-12 pb-12 overflow-hidden">
+            <header class="heading-wrapper pt-10 pb-10 overflow-hidden">
 
                 <!-- Heading -->
                 <h1 class="heading {{ section.settings.heading_size }}">

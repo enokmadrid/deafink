@@ -912,6 +912,8 @@
           "show_description": false,
           "description_length": "140",
           "show_price": true,
+          "show_badge_sold_out": true,
+          "show_badge_sale": true,
           "row_": 2,
           "row_sm": 2,
           "row_md": 3,
@@ -968,7 +970,10 @@
           "carousel_video_ratio": "ratio-16x9",
           "carousel_full_screen": true,
           "carousel_full_screen_caption": true,
-          "carousel_full_screen_indicators": true
+          "carousel_full_screen_indicators": true,
+          "has_octo_edge": true,
+          "edge_position": "bottom-right",
+          "edge_color": "000000"
         }
       },
       "cart-template": {
@@ -992,9 +997,9 @@
           "max_width": "775",
           "heading_size": "h2",
           "img": "shopify:\/\/shop_images\/hero_0a060c04-e4a9-40c6-833b-174e16c695d7.png",
-          "img_width": "1200",
-          "img_height": "675",
-          "img_thumbnail": false,
+          "img_size": 50,
+          "img_position_y": "top",
+          "img_position_x": "right",
           "has_octo_edge": true,
           "edge_position": "bottom-right",
           "edge_color": "000000"
@@ -1045,6 +1050,8 @@
           "show_description": false,
           "description_length": "70",
           "show_price": true,
+          "show_badge_sold_out": true,
+          "show_badge_sale": true,
           "row_": 2,
           "row_sm": 2,
           "row_md": 3,
@@ -1068,8 +1075,15 @@
       "page-template": {
         "type": "page-template",
         "settings": {
-          "max_width": "768",
-          "heading_size": "display-5"
+          "max_width": "",
+          "heading_size": "h2",
+          "img": "shopify:\/\/shop_images\/hero_b423fcec-2cb9-4f2d-aaf8-0e4c6a230e7b.png",
+          "img_size": 50,
+          "img_position_y": "top",
+          "img_position_x": "right",
+          "has_octo_edge": true,
+          "edge_position": "bottom-right",
+          "edge_color": "000000"
         }
       },
       "162329471335fe9c81": {
@@ -1089,6 +1103,30 @@
           "has_octo_edge": true,
           "edge_position": "top-left",
           "edge_color": "F4F4F4"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "heading": "Web Store",
+          "heading_size": "h2",
+          "subheading": "<p>I have a broad selection of artwork ranging from fine-art paintings, to sculptures and apparel. <a href=\"collections\/all\">Browse all products<\/a><\/p>",
+          "subheading_size": "",
+          "container": true,
+          "paginate": 30,
+          "img_width": "480",
+          "img_height": "480",
+          "img_thumbnail": false,
+          "show_products_count": true,
+          "row_": 2,
+          "row_sm": 2,
+          "row_md": 2,
+          "row_lg": 4,
+          "row_xl": 4,
+          "row_xxl": 4,
+          "gutter_mobile": 3,
+          "gutter_tablet": 3,
+          "gutter_desktop": 4
         }
       }
     },

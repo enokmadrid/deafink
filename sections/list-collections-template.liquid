@@ -9,12 +9,10 @@
 {% assign gutter_tablet  = section.settings.gutter_tablet | prepend: 'g-sm-' %}
 {% assign gutter_desktop = section.settings.gutter_desktop | prepend: 'g-xl-' %}
 
-<div id="list-collections">
+<div id="list-collections" class="bg-light pt-10">
 
     <!-- Header -->
-    <div
-        class="heading-wrapper container overflow-hidden text-center mx-auto mb-3" 
-        style="max-width: 768px">
+    <div class="heading-wrapper container overflow-hidden mx-auto mb-3">
 
         <h1 class="heading mb-1 {{ section.settings.heading_size }}">
             {{ section.settings.heading }}
@@ -90,6 +88,9 @@
 
     </div>
 
+    {% if section.settings.has_octo_edge == true %} 
+        {% include 'octo-edge' %}
+    {% endif %}
 </div>
 
 {% schema %}
@@ -275,6 +276,37 @@
             "max": 12,
             "step": 1,
             "default": 4
+        },
+        {
+            "type": "header",
+            "content": "Container Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "has_octo_edge",
+            "label": "Add Octo Edge",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "edge_position",
+            "label": "Edge Position",
+            "default": "bottom-right",
+            "options": [
+                { "value": "bottom-left", "label": "Bottom Left" },
+                { "value": "bottom-right", "label": "Bottom Right" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "edge_color",
+            "label": "Edge Color",
+            "default": "000000",
+            "options": [
+                { "value": "000000", "label": "Black" },
+                { "value": "FFFFFF", "label": "White" },
+                { "value": "F4F4F4", "label": "Gray"}
+            ]
         }
     ]
 }

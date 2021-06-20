@@ -7,7 +7,7 @@
 
 <article
     id="product-{{ product.id }}"
-    class="product mb-7"
+    class="product pt-10 bg-light"
     data-product-id="{{ product.id }}"
     data-product-handle="{{ product.handle }}"
     data-product-title="{{ product.title }}"
@@ -49,7 +49,7 @@
                         </ol>
                     {% endif %}
                     
-                    <div class="carousel-inner">
+                    <div class="carousel-inner p-10">
 
                         {% for media in product.media %}
                             <div 
@@ -434,6 +434,9 @@
 
         </div>
     </div>
+    {% if section.settings.has_octo_edge == true %} 
+        {% include 'octo-edge' %}
+    {% endif %}
 
 </article>
 
@@ -635,6 +638,37 @@
             "id": "carousel_full_screen_indicators",
             "label": "Full-screen / Show Indicators",
             "default": true
+        },
+        {
+            "type": "header",
+            "content": "Container Settings"
+        },
+        {
+            "type": "checkbox",
+            "id": "has_octo_edge",
+            "label": "Add Octo Edge",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "edge_position",
+            "label": "Edge Position",
+            "default": "bottom-left",
+            "options": [
+                { "value": "bottom-left", "label": "Bottom Left" },
+                { "value": "bottom-right", "label": "Bottom Right" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "edge_color",
+            "label": "Edge Color",
+            "default": "000000",
+            "options": [
+                { "value": "000000", "label": "Black" },
+                { "value": "FFFFFF", "label": "White" },
+                { "value": "F4F4F4", "label": "Gray"}
+            ]
         }
     ],
     "blocks": [

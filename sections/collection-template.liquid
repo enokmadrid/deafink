@@ -8,43 +8,43 @@
     {% assign layout = section.settings.layout %}        
 {% endif %}
 
-<div
-    id="collection-{{ collection.id }}"
-    class="collection bg-secondary">
+{% if section.settings.show_collection_img and collection.image %}
+    {% assign collection_img_800_size = section.settings.collection_img_height | prepend: '800x' %}
+    {% assign collection_img_1600_size = section.settings.collection_img_height | prepend: '1600x' %}
 
-    <!-- Collection image -->
-    {% if section.settings.show_collection_img and collection.image %}
-        {% assign collection_img_800_size = section.settings.collection_img_height | prepend: '800x' %}
-        {% assign collection_img_1600_size = section.settings.collection_img_height | prepend: '1600x' %}
-        <img 
-            class="collection-img w-100 h-auto object-fit-cover mt-n7 mb-6"
-            src="{{ collection.image | img_url: collection_img_1600_size, crop: 'center' }}"
-            srcset="
-                {{ collection.image | img_url: collection_img_800_size, crop: 'center' }} 800w, 
-                {{ collection.image | img_url: collection_img_1600_size, crop: 'center' }} 1600w
-            "
-            alt="{{ collection.image.alt | escape }}" 
-            width="1600"
-            height="{{section.settings.collection_img_height }}"
-            style="{{section.settings.collection_img_height | prepend: 'max-height: ' | append: 'px' }};">
-    {% endif %}
+    <section style="
+    background:url({{ collection.image | img_url: collection_img_1600_size, crop: 'center' }}) {{ settings.color_secondary }};
+    background-size: 50%;
+    background-blend-mode: luminosity;
+    background-position: center right;
+    background-repeat: no-repeat;">
 
-    <!-- Collection header -->
-    <div
-        class="heading-wrapper container overflow-hidden text-center mx-auto mb-3" 
-        style="max-width: 768px">
+{% else %}
+<section style="background-color: {{ settings.color_secondary }};">
+{% endif %}
 
-        <h1 class="heading mb-1 {{ section.settings.heading_size }}">
-            {{ collection.title }}
-        </h1>
+    <div class="container mx-auto">
 
-        {% if section.settings.show_collection_description and collection.description != blank %}
-            <div class="description rte text-muted {{ section.settings.description_size }}">
-                {{ collection.description }}
-            </div>
-        {% endif %}
+        <!-- Header -->
+        <header class="heading-wrapper pt-10 pb-10 overflow-hidden">
+            <div class="row">
 
+                <!-- Heading -->
+                <div class="col">
+                    <h1 class="heading h2">{{ collection.title }}</h1>
+
+                    {% if section.settings.show_collection_description and collection.description != blank %}
+                        <div class="description rte text-muted {{ section.settings.description_size }}">
+                            {{ collection.description }}
+                        </div>
+                    {% endif %}
+                </div>
+
+        </header>
     </div>
+</section>
+
+<div id="collection-{{ collection.id }}" class="collection bg-light">
 
     <div class="{% if section.settings.container %}container{% else %}container-fluid{% endif %}">
 
