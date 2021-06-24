@@ -7,7 +7,7 @@
 
 <article
     id="product-{{ product.id }}"
-    class="product pt-10 bg-light"
+    class="product pt-10 mb-3 bg-light"
     data-product-id="{{ product.id }}"
     data-product-handle="{{ product.handle }}"
     data-product-title="{{ product.title }}"
@@ -21,7 +21,7 @@
                 <!-- Product carousel -->
                 <div 
                     id="product-carousel" 
-                    class="product-carousel carousel sticky-top mb-4 {{ section.settings.carousel_style }} {{ section.settings.carousel_transition | escape }}" 
+                    class="row product-carousel carousel sticky-top mb-4 {{ section.settings.carousel_style }} {{ section.settings.carousel_transition | escape }}" 
                     data-bs-ride="carousel"
                     data-bs-pause="hover"
                     data-bs-interval="{% if section.settings.carousel_interval > 0 %}{{ section.settings.carousel_interval | times: 1000 }}{% else %}false{% endif %}"
@@ -48,108 +48,16 @@
                             {% endfor %}
                         </ol>
                     {% endif %}
-                    
-                    <div class="carousel-inner p-10">
-
-                        {% for media in product.media %}
-                            <div 
-                                class="carousel-item {% if media.id == current_media_id %}active{% endif %}"
-                                data-media-id="{{ media.id }}"
-                                role="group"
-                                aria-roledescription="slide"
-                                aria-label="{{ forloop.index }} {{ 'general.from' | t }} {{ product.media.size }}">
-
-                                {% case media.media_type %}
-                                    {% when 'image' %}
-                                        
-                                        {% if section.settings.carousel_full_screen %}
-                                            <a href="{{ media.src | img_url: '2048x' }}">
-                                        {% endif %}
-
-                                            {% if section.settings.carousel_img_square %}
-                                                {% assign img_size   = '680x680' %}
-                                                {% assign img_height = '680' %}
-                                            {% else %}
-                                                {% assign img_size   = '680x' %}
-                                                {% assign img_height = 680 | divided_by: media.aspect_ratio %}
-                                            {% endif %}
-
-                                            <img
-                                                class="d-block img-fluid rounded"
-                                                src="{{ media.preview_image | img_url: img_size, crop: 'center' }}"
-                                                data-src="{{ media.preview_image | img_url: img_size, crop: 'center' }}"
-                                                alt="{{ media.alt | escape }}"
-                                                width="680"
-                                                height="{{ img_height }}"
-                                                loading="lazy">
-
-                                        {% if section.settings.carousel_full_screen %}
-                                            </a>
-                                        {% endif %}
-
-                                    {% when 'external_video' %}
-                                        <div class="ratio {{ section.settings.carousel_video_ratio }}">
-                                            {{ media | external_video_tag }}
-                                        </div>
-
-                                    {% when 'video' %}
-                                        <div class="ratio {{ section.settings.carousel_video_ratio }}">
-                                            {{ media | video_tag: controls: true }}
-                                        </div>
-
-                                {% endcase %}
-
-                                {% if section.settings.carousel_full_screen and section.settings.carousel_full_screen_caption %}
-                                    <div class="carousel-caption">
-                                        <p class="h6 mb-0">
-                                            {{ media.alt }}
-                                        </p>
-                                    </div>
-                                {% endif %}
-
-                            </div>
-                        {% endfor %}
-                        
-                        <!-- Controls -->
-                        {% if section.settings.carousel_controls and product.media.size > 1 %}
-                            <a 
-                                class="carousel-control-prev" 
-                                href="#product-carousel" 
-                                role="button" 
-                                data-bs-slide="prev">
-                                <span 
-                                    class="carousel-control-prev-icon" 
-                                    aria-hidden="true">
-                                </span>
-                                <span class="visually-hidden">
-                                    {{ 'general.previous' | t }}
-                                </span>
-                            </a>
-                            <a 
-                                class="carousel-control-next" 
-                                href="#product-carousel" 
-                                role="button" 
-                                data-bs-slide="next">
-                                <span
-                                    class="carousel-control-next-icon" 
-                                    aria-hidden="true">
-                                </span>
-                                <span class="visually-hidden">
-                                    {{ 'general.next' | t }}
-                                </span>
-                            </a>
-                        {% endif %}
-
-                    </div>
 
                     <!-- Thumbnails -->
                     {% if section.settings.carousel_thumbnails and product.media.size > 1 %}
+                    <div class="col col-sm-2">
                         <ol 
-                            class="product-carousel-thumbnails list-unstyled mx-n1 my-2 row row-cols-{{ section.settings.carousel_thumbnails_row }}"
+                            class="d-flex flex-column product-carousel-thumbnails list-unstyled mx-n1"
                             aria-hidden="true">
                             {% for media in product.media %}
                                 <a
-                                    class="product-carousel-thumbnails-item col px-1 py-1 {% if media.media_type == 'video' or media.media_type == 'external_video' %}is-video{% endif %} {% if media.id == current_media_id %}active{% endif %}"
+                                    class="product-carousel-thumbnails-item col pb-2 {% if media.media_type == 'video' or media.media_type == 'external_video' %}is-video{% endif %} {% if media.id == current_media_id %}active{% endif %}"
                                     href="{{ media.src | img_url: '2048x' }}"
                                     data-bs-target="#product-carousel" 
                                     data-bs-slide-to="{{ forloop.index0 }}">
@@ -171,16 +79,112 @@
                                 </a>
                             {% endfor %}
                         </ol>
+                    </div>
                     {% endif %}
+                    
+                    <div class="col col-sm-10">
+                        <div class="carousel-inner">
+
+                            {% for media in product.media %}
+                                <div 
+                                    class="carousel-item {% if media.id == current_media_id %}active{% endif %}"
+                                    data-media-id="{{ media.id }}"
+                                    role="group"
+                                    aria-roledescription="slide"
+                                    aria-label="{{ forloop.index }} {{ 'general.from' | t }} {{ product.media.size }}">
+
+                                    {% case media.media_type %}
+                                        {% when 'image' %}
+                                            
+                                            {% if section.settings.carousel_full_screen %}
+                                                <a href="{{ media.src | img_url: '2048x' }}">
+                                            {% endif %}
+
+                                                {% if section.settings.carousel_img_square %}
+                                                    {% assign img_size   = '680x680' %}
+                                                    {% assign img_height = '680' %}
+                                                {% else %}
+                                                    {% assign img_size   = '680x' %}
+                                                    {% assign img_height = 680 | divided_by: media.aspect_ratio %}
+                                                {% endif %}
+
+                                                <img
+                                                    class="d-block img-fluid rounded"
+                                                    src="{{ media.preview_image | img_url: img_size, crop: 'center' }}"
+                                                    data-src="{{ media.preview_image | img_url: img_size, crop: 'center' }}"
+                                                    alt="{{ media.alt | escape }}"
+                                                    width="680"
+                                                    height="{{ img_height }}"
+                                                    loading="lazy">
+
+                                            {% if section.settings.carousel_full_screen %}
+                                                </a>
+                                            {% endif %}
+
+                                        {% when 'external_video' %}
+                                            <div class="ratio {{ section.settings.carousel_video_ratio }}">
+                                                {{ media | external_video_tag }}
+                                            </div>
+
+                                        {% when 'video' %}
+                                            <div class="ratio {{ section.settings.carousel_video_ratio }}">
+                                                {{ media | video_tag: controls: true }}
+                                            </div>
+
+                                    {% endcase %}
+
+                                    {% if section.settings.carousel_full_screen and section.settings.carousel_full_screen_caption %}
+                                        <div class="carousel-caption">
+                                            <p class="h6 mb-0">
+                                                {{ media.alt }}
+                                            </p>
+                                        </div>
+                                    {% endif %}
+
+                                </div>
+                            {% endfor %}
+                            
+                            <!-- Controls -->
+                            {% if section.settings.carousel_controls and product.media.size > 1 %}
+                                <a 
+                                    class="carousel-control-prev" 
+                                    href="#product-carousel" 
+                                    role="button" 
+                                    data-bs-slide="prev">
+                                    <span 
+                                        class="carousel-control-prev-icon" 
+                                        aria-hidden="true">
+                                    </span>
+                                    <span class="visually-hidden">
+                                        {{ 'general.previous' | t }}
+                                    </span>
+                                </a>
+                                <a 
+                                    class="carousel-control-next" 
+                                    href="#product-carousel" 
+                                    role="button" 
+                                    data-bs-slide="next">
+                                    <span
+                                        class="carousel-control-next-icon" 
+                                        aria-hidden="true">
+                                    </span>
+                                    <span class="visually-hidden">
+                                        {{ 'general.next' | t }}
+                                    </span>
+                                </a>
+                            {% endif %}
+
+                        </div>
+                    </div>
 
                 </div>
 
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 ps-8">
 
                 <!-- Heading -->
-                <h1 class="heading my-1 {{ section.settings.heading_size }}">
+                <h1 class="heading mb-4 {{ section.settings.heading_size }}">
                     {{ product.title }}
                 </h1>
 
@@ -221,7 +225,7 @@
                 </p>
 
                 <!-- Add to cart form -->
-                {% form 'product', product,  class: 'bg-light py-5 px-5 mb-6' %}
+                {% form 'product', product,  class: 'py-5 mb-6' %}
                     
                     {% if product.has_only_default_variant %}
                         <input type="hidden" name="id" value="{{ current_variant.id }}">
@@ -292,7 +296,7 @@
                         <!-- Add to cart button -->
                         {% if section.settings.show_add_to_cart_button %}
                             <button
-                                class="add-to-cart-btn btn btn-primary btn-block d-flex align-items-center justify-content-center flex-grow-1"
+                                class="add-to-cart-btn btn btn-primary btn-lg btn-block d-flex align-items-center justify-content-center"
                                 type="submit"
                                 {% unless current_variant.available %}disabled{% endunless %}>
                                     
@@ -329,7 +333,7 @@
                     <!-- Taxes/Shipping notice -->
                     {% if section.settings.show_taxes_shipping_notice %}
                         <p 
-                            class="taxes-shipping-notice text-muted fst-italic text-center small mt-3 mb-n1">
+                            class="taxes-shipping-notice text-muted fst-italic small mt-3 mb-n1">
                             {{ 'cart.taxes_shipping_at_checkout_html' | t }}
                         </p>
                     {% endif %}

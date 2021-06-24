@@ -43,6 +43,7 @@ input[id*=address_default_address] {
 .shopify-payment-button {
     .shopify-payment-button__button {
         @extend .btn;
+        @extend .btn-lg;
         @extend .btn-secondary;
         &:hover:not([disabled]) {
             background: var(--color-secondary-darken-10);

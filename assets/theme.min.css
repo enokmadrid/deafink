@@ -43,6 +43,17 @@
   color: var(--color-body-primary-light);
   letter-spacing: 6.4px;
 }
+.bg-light .price, .bg-light a {
+  color: var(--color-body-primary-light);
+}
+.bg-light .social-sharing a {
+  color: var(--color-body-text-light);
+}
+.bg-light .price {
+  font-family: "Proxima Nova";
+  font-weight: 800;
+  font-size: 1.2rem;
+}
 
 /* 
     © 2021 KondaSoft
@@ -3798,7 +3809,7 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn, .shopify-payment-button .btn-group-lg > .shopify-payment-button__button {
+.btn-lg, .shopify-payment-button .shopify-payment-button__button, .btn-group-lg > .btn {
   padding: 1rem 2rem;
   font-size: 0.75rem;
   border-radius: 0.3rem;
@@ -4201,7 +4212,7 @@ textarea.form-control-lg {
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .shopify-payment-button .btn-group-lg > .shopify-payment-button__button + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .shopify-payment-button .shopify-payment-button__button + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .shopify-payment-button .btn-group-lg > .shopify-payment-button__button + .dropdown-toggle-split {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
@@ -16106,6 +16117,7 @@ a:hover {
   background-position: right;
   transition: all 350ms cubic-bezier(0, 0, 0.2, 1);
   color: var(--color-secondary);
+  border: none;
 }
 
 .btn-outline-primary,
@@ -16150,6 +16162,7 @@ a:hover {
   background-position: left;
   transition: all 350ms cubic-bezier(0, 0, 0.2, 1);
   color: white;
+  border: none;
 }
 
 .btn-outline-secondary,
@@ -16289,6 +16302,16 @@ a:hover {
 }
 .accordion .accordion-body p:last-child {
   margin-bottom: 0;
+}
+
+.product-accordion .accordion-button {
+  font-family: "Amatic SC";
+}
+.product-accordion .accordion-button:not(.collapsed) {
+  color: var(--color-body-primary-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 
 .toast-wrapper {

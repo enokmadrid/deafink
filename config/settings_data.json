@@ -937,7 +937,7 @@
           "a002179c-cc4b-44a0-b368-e843a497174b": {
             "type": "richtext",
             "settings": {
-              "title": "Rich text",
+              "title": "Shipping Info",
               "description": "<p>Feel free to create additional blocks like this for <strong>Shipping, Payments, etc<\/strong> through the Shopify Theme editor. Also, you may easily adjust their order by dragging and dropping.<\/p>"
             }
           }
@@ -947,18 +947,18 @@
           "a002179c-cc4b-44a0-b368-e843a497174b"
         ],
         "settings": {
-          "heading_size": "display-5",
+          "heading_size": "h3",
           "show_vendor": false,
           "show_type": false,
           "show_sku": false,
           "show_qty": true,
           "show_add_to_cart_button": true,
-          "show_buy_it_now_button": true,
+          "show_buy_it_now_button": false,
           "show_taxes_shipping_notice": true,
           "show_payment_icons": true,
           "show_social_sharing": true,
           "show_tags": true,
-          "accordion_style": "",
+          "accordion_style": "accordion-flush",
           "carousel_interval": 0,
           "carousel_transition": "slide",
           "carousel_controls": true,
@@ -968,7 +968,7 @@
           "carousel_thumbnails_row": 5,
           "carousel_img_square": true,
           "carousel_video_ratio": "ratio-16x9",
-          "carousel_full_screen": true,
+          "carousel_full_screen": false,
           "carousel_full_screen_caption": true,
           "carousel_full_screen_indicators": true,
           "has_octo_edge": true,
