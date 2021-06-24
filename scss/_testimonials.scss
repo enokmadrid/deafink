@@ -14,6 +14,12 @@
         &.has-indicators {
             padding-bottom: 2.5rem;
         }
+        .carousel-control-prev {
+            justify-content: flex-start;
+        }
+        .carousel-control-next {
+            justify-content: flex-end;
+        }
     }
     .blockquote-footer {
         margin-top: 0;

@@ -43,7 +43,7 @@
   color: var(--color-body-primary-light);
   letter-spacing: 6.4px;
 }
-.bg-light .price, .bg-light a {
+.bg-light .price, .bg-light a:not(.btn) {
   color: var(--color-body-primary-light);
 }
 .bg-light .social-sharing a {
@@ -52,7 +52,7 @@
 .bg-light .price {
   font-family: "Proxima Nova";
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 /* 
@@ -17075,6 +17075,12 @@ ul.social-sharing li a[href*="mailto:?subject"]:hover, ul.social-sharing li a[hr
 }
 .testimonials .carousel.has-indicators {
   padding-bottom: 2.5rem;
+}
+.testimonials .carousel .carousel-control-prev {
+  justify-content: flex-start;
+}
+.testimonials .carousel .carousel-control-next {
+  justify-content: flex-end;
 }
 .testimonials .blockquote-footer {
   margin-top: 0;

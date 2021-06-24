@@ -36,7 +36,7 @@
             letter-spacing: 6.4px;
         }
     }
-    .price, a {
+    .price, a:not(.btn) {
         color: var(--color-body-primary-light);
     }
     .social-sharing a {
@@ -45,6 +45,6 @@
     .price {
         font-family: 'Proxima Nova';
         font-weight: 800;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 }
