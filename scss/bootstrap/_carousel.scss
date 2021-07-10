@@ -24,6 +24,15 @@
   width: 100%;
   overflow: hidden;
   @include clearfix();
+  @include media-breakpoint-only(lg) {
+    height: 660px;
+  }
+  @include media-breakpoint-only(md) {
+    height: 600px;
+  }
+  @include media-breakpoint-down(md) {
+    height: 500px;
+  }
 }
 
 .carousel-item {
@@ -34,6 +43,26 @@
   margin-right: -100%;
   backface-visibility: hidden;
   @include transition($carousel-transition);
+
+  
+  @include media-breakpoint-down(md) {
+    .h1 {
+      font-size: calc(2.25rem + 5.5vw);
+    }
+  }
+  @include media-breakpoint-only(xs) {
+    .h1 {
+      font-size: calc(2.25rem + 2.5vw);
+    }
+    h3::after {
+      top: 40px !important;
+      width: 80px !important;
+    }
+    .btn {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+  }
 }
 
 .carousel-item.active,

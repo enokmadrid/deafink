@@ -83,7 +83,7 @@
       "161243980752a5ed7a": {
         "type": "featured-collection",
         "settings": {
-          "collection": "canvases",
+          "collection": "featured-products",
           "heading": "Featured Products",
           "subheading": "",
           "limit": 6,
@@ -125,22 +125,36 @@
       "161281990869fdf1c2": {
         "type": "collection-list",
         "blocks": {
-          "8362ccfb-a77b-4159-85c3-ef8ae1bed48b": {
+          "9fc3f5b4-bf6d-493d-b939-ea39909effa0": {
             "type": "collection",
             "settings": {
-              "collection": "canvases"
+              "collection": "canvases-1"
             }
           },
-          "4caadbdd-6f48-4ec5-b722-0bc3e2a6b0a6": {
+          "d55a8ce5-1e65-486e-8172-ea74046d0761": {
             "type": "collection",
             "settings": {
-              "collection": "collectables"
+              "collection": "collectables-1"
+            }
+          },
+          "cdf9e41f-9e49-4411-8479-8bbce8ed8782": {
+            "type": "collection",
+            "settings": {
+              "collection": "sculptures"
+            }
+          },
+          "89804d6f-f2c4-44a1-96d9-5312511679df": {
+            "type": "collection",
+            "settings": {
+              "collection": "apparel"
             }
           }
         },
         "block_order": [
-          "8362ccfb-a77b-4159-85c3-ef8ae1bed48b",
-          "4caadbdd-6f48-4ec5-b722-0bc3e2a6b0a6"
+          "9fc3f5b4-bf6d-493d-b939-ea39909effa0",
+          "d55a8ce5-1e65-486e-8172-ea74046d0761",
+          "cdf9e41f-9e49-4411-8479-8bbce8ed8782",
+          "89804d6f-f2c4-44a1-96d9-5312511679df"
         ],
         "settings": {
           "heading": "Catalog",
@@ -173,136 +187,13 @@
           "margin_bottom": 0
         }
       },
-      "16129467980997b2cd": {
-        "type": "image-with-text",
-        "disabled": true,
-        "settings": {
-          "container": true,
-          "light_bg": false,
-          "img_width": "720",
-          "img_height": "720",
-          "img_thumbnail": true,
-          "img_alignment": "",
-          "heading": "Image with text",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
-          "heading_size": "h2",
-          "subheading_size": "",
-          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-          "btn_label": "Learn more",
-          "btn_url": "#",
-          "btn_color": "btn-outline-primary",
-          "btn_size": "",
-          "padding_top": 0,
-          "padding_bottom": 0,
-          "margin_top": 0,
-          "margin_bottom": 9
-        }
-      },
-      "1612951102935a69c3": {
-        "type": "image-with-text-overlay",
-        "disabled": true,
-        "settings": {
-          "container": false,
-          "section_height": "section-height-md",
-          "overlay_style": "overlay-dark",
-          "overlay_opacity": "overlay-opacity-25",
-          "img_alignment": "image-with-text-overlay-img-center",
-          "heading": "Image with text overlay",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
-          "heading_size": "h1",
-          "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
-          "lead": true,
-          "btn_label": "Learn more",
-          "btn_url": "#",
-          "btn_color": "btn-light",
-          "btn_size": "btn-lg",
-          "padding_top": 0,
-          "padding_bottom": 0,
-          "margin_top": 0,
-          "margin_bottom": 0
-        }
-      },
-      "1613034094b1e14cbd": {
-        "type": "logo-list",
-        "disabled": true,
-        "blocks": {
-          "e1cf75d0-157b-4a2e-a182-2e4a6d5ef5a0": {
-            "type": "logo",
-            "settings": {
-              "url": "#"
-            }
-          },
-          "9bb82def-3826-41b5-905f-dfd52ad91d33": {
-            "type": "logo",
-            "settings": {
-              "url": "#"
-            }
-          },
-          "4067c443-1eb5-414f-ae95-3b69634ee37f": {
-            "type": "logo",
-            "settings": {
-              "url": "#"
-            }
-          },
-          "31c23b7b-a08b-4888-9072-fc0e6a53d7f2": {
-            "type": "logo",
-            "settings": {
-              "url": "#"
-            }
-          },
-          "a4e3d41f-1026-4398-9854-488337cdda21": {
-            "type": "logo",
-            "settings": {
-              "url": "#"
-            }
-          },
-          "5ca3d57d-533c-4459-b0a9-52a084aa7d3b": {
-            "type": "logo",
-            "settings": {
-              "url": "#"
-            }
-          }
-        },
-        "block_order": [
-          "e1cf75d0-157b-4a2e-a182-2e4a6d5ef5a0",
-          "9bb82def-3826-41b5-905f-dfd52ad91d33",
-          "4067c443-1eb5-414f-ae95-3b69634ee37f",
-          "31c23b7b-a08b-4888-9072-fc0e6a53d7f2",
-          "a4e3d41f-1026-4398-9854-488337cdda21",
-          "5ca3d57d-533c-4459-b0a9-52a084aa7d3b"
-        ],
-        "settings": {
-          "heading": "Logo list",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
-          "container": true,
-          "light_bg": false,
-          "heading_size": "h4",
-          "heading_alignment": "text-center",
-          "subheading_size": "",
-          "img_width": "320",
-          "img_height": "320",
-          "img_thumbnail": true,
-          "row_": 2,
-          "row_sm": 3,
-          "row_md": 3,
-          "row_lg": 6,
-          "row_xl": 6,
-          "row_xxl": 6,
-          "gutter_mobile": 3,
-          "gutter_tablet": 3,
-          "gutter_desktop": 6,
-          "padding_top": 0,
-          "padding_bottom": 0,
-          "margin_top": 0,
-          "margin_bottom": 8
-        }
-      },
       "1613036274b5bc23d7": {
         "type": "gallery",
         "blocks": {
           "4542108e-43c9-4d88-b996-7fd9b750fad4": {
             "type": "image",
             "settings": {
+              "img": "shopify:\/\/shop_images\/Asset_6.png",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -311,6 +202,7 @@
           "27d3af47-c122-4a20-b3a2-4664ed203eca": {
             "type": "image",
             "settings": {
+              "img": "shopify:\/\/shop_images\/Asset_1.png",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -319,6 +211,7 @@
           "585f88aa-a094-4668-8bc1-ba23f9bbdddd": {
             "type": "image",
             "settings": {
+              "img": "shopify:\/\/shop_images\/Asset_3.png",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -327,6 +220,7 @@
           "73417504-c1cc-48b7-a328-5382ba548e24": {
             "type": "image",
             "settings": {
+              "img": "shopify:\/\/shop_images\/Asset_5.png",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -335,6 +229,7 @@
           "0b1382b9-fc44-4c96-8dc4-0b9400753827": {
             "type": "image",
             "settings": {
+              "img": "shopify:\/\/shop_images\/Asset_8.png",
               "url": "#",
               "caption": "Add your image caption",
               "caption_size": "h6"
@@ -360,8 +255,8 @@
           "img_width": "520",
           "img_height": "1100",
           "img_thumbnail": false,
-          "overlay_style": "overlay-light",
-          "overlay_opacity": "overlay-opacity-50",
+          "overlay_style": "overlay-dark",
+          "overlay_opacity": "overlay-opacity-25",
           "overlay_blur": false,
           "row_": 2,
           "row_sm": 3,
@@ -379,76 +274,22 @@
           "edge_color": "000000"
         }
       },
-      "1613036565184adb1d": {
-        "type": "separator",
-        "disabled": true,
-        "settings": {
-          "container": true,
-          "bg_color": "#dee2e6",
-          "margin_top": 7,
-          "margin_bottom": 8
-        }
-      },
-      "16130473820c97e316": {
-        "type": "featured-product",
-        "disabled": true,
-        "settings": {
-          "product": "tattoo-appointment-reservation",
-          "container": true,
-          "light_bg": false,
-          "badge": "Featured product",
-          "badge_color": "bg-primary",
-          "heading_size": "h3",
-          "img_width": "420",
-          "img_height": "320",
-          "img_thumbnail": false,
-          "show_vendor": true,
-          "show_price": true,
-          "show_description": true,
-          "description_truncate": "240",
-          "show_view_product_btn": true,
-          "view_product_btn_color": "btn-primary",
-          "view_product_btn_size": "btn-lg",
-          "show_social_sharing": true,
-          "padding_top": 0,
-          "padding_bottom": 0,
-          "margin_top": 0,
-          "margin_bottom": 0
-        }
-      },
-      "16131223138a584ff0": {
-        "type": "newsletter",
-        "disabled": true,
-        "settings": {
-          "heading": "Newsletter subscribe",
-          "subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
-          "light_bg": false,
-          "heading_size": "h2",
-          "heading_alignment": "text-center",
-          "subheading_size": "",
-          "btn_color": "btn-outline-primary",
-          "padding_top": 0,
-          "padding_bottom": 0,
-          "margin_top": 0,
-          "margin_bottom": 8
-        }
-      },
       "16131300457e5a9b91": {
         "type": "testimonials",
         "blocks": {
           "16131300457e5a9b91-0": {
             "type": "testimonial",
             "settings": {
-              "text": "<p>I love KondaSoft Shopify Themes, not only they are beautiful and attractive but they are super-fast as well. I have tried different theme providers before but with KondaSoft's themes I could finish my store very quickly (within 1 week). I can recommend KondaSoft, that's for sure... A+++<\/p>",
-              "name": "Jane Doe",
+              "text": "<p>This was the best tattoo experience I’ve ever had! Not only is Gayle extremely talented, but she also makes sure that you’re as comfortable as you can possibly be while getting your tattoo done. Shout out to Iguanaz who totally made my experience amazing, ...Totally worth all the pain.<\/p>",
+              "name": "Amanda Doe",
               "img": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg"
             }
           },
           "16131300457e5a9b91-1": {
             "type": "testimonial",
             "settings": {
-              "text": "<p>I have been successfully running my store with KondaSoft's theme, KS WatchShop for 2 months now, and I'm really impressed with the performance and speed it has. The speed-rank for my Shopify store has increased dramatically after I switched to this theme...<\/p>",
-              "name": "Jean Doe",
+              "text": "<p>This was the best tattoo experience I’ve ever had! Not only is Gayle extremely talented, but she also makes sure that you’re as comfortable as you can possibly be while getting your tattoo done. Shout out to Iguanaz who totally made my experience amazing, ...Totally worth all the pain.<\/p>",
+              "name": "Customer Name",
               "img": "shopify:\/\/shop_images\/woman-poses-in-dark-room.jpg"
             }
           }
@@ -478,159 +319,6 @@
           "has_octo_edge": true,
           "edge_position": "top-right",
           "edge_color": "FFFFFF"
-        }
-      },
-      "161313402064cf991c": {
-        "type": "text-columns-with-image",
-        "disabled": true,
-        "blocks": {
-          "161313402064cf991c-1": {
-            "type": "content",
-            "settings": {
-              "heading": "Add a title or tagline",
-              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
-              "btn_label": "Learn more",
-              "btn_url": "#"
-            }
-          },
-          "161313402064cf991c-2": {
-            "type": "content",
-            "settings": {
-              "heading": "Add a title or tagline",
-              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
-              "btn_label": "Learn more",
-              "btn_url": "#"
-            }
-          },
-          "161313402064cf991c-3": {
-            "type": "content",
-            "settings": {
-              "heading": "Add a title or tagline",
-              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
-              "btn_label": "Learn more",
-              "btn_url": "#"
-            }
-          }
-        },
-        "block_order": [
-          "161313402064cf991c-1",
-          "161313402064cf991c-2",
-          "161313402064cf991c-3"
-        ],
-        "settings": {
-          "heading": "Text column with image",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
-          "container": true,
-          "light_bg": false,
-          "heading_size": "h2",
-          "heading_alignment": "text-center",
-          "subheading_size": "",
-          "img_width": "480",
-          "img_height": "480",
-          "img_thumbnail": true,
-          "block_text_alignment": "text-start",
-          "block_heading_size": "h5",
-          "btn_color": "btn-outline-secondary",
-          "btn_size": "btn-sm",
-          "row_": 1,
-          "row_sm": 2,
-          "row_md": 2,
-          "row_lg": 4,
-          "row_xl": 4,
-          "row_xxl": 4,
-          "gutter_mobile": 3,
-          "gutter_tablet": 4,
-          "gutter_desktop": 6,
-          "padding_top": 0,
-          "padding_bottom": 0,
-          "margin_top": 0,
-          "margin_bottom": 7
-        }
-      },
-      "1613321883059203ae": {
-        "type": "map",
-        "disabled": true,
-        "settings": {
-          "heading": "Our physical address",
-          "subheading": "<p>Come and say Hello. We will be happy to meet your in person.<\/p>",
-          "container": false,
-          "light_bg": false,
-          "heading_size": "h2",
-          "heading_alignment": "text-center",
-          "subheading_size": "",
-          "api_key": "AIzaSyDpX9IvWgz_RAIftiJa8Fqxx8LJKwotoyI",
-          "lat": "43.750840",
-          "lng": "7.441000",
-          "zoom": 15,
-          "map_height": "380",
-          "title": "Your Shop Name",
-          "content": "<p>Avenue Princesse Grace<br\/>Monaco, MC<\/p><p>Mon - Fri, 10am - 9pm<br\/>Saturday, 11am - 9pm<br\/>Sunday, 11am - 5pm<\/p>",
-          "content_alignment": "text-center",
-          "btn_label": "Get directions",
-          "btn_color": "btn-outline-secondary",
-          "padding_top": 0,
-          "padding_bottom": 0,
-          "margin_top": 0,
-          "margin_bottom": 7
-        }
-      },
-      "1613465098c76677b8": {
-        "type": "richtext",
-        "disabled": true,
-        "settings": {
-          "heading": "Richtext",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
-          "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
-          "light_bg": true,
-          "heading_size": "h2",
-          "subheading_size": "",
-          "text_size": "",
-          "text_alignment": "text-center",
-          "max_width": "768",
-          "padding_top": 7,
-          "padding_bottom": 6,
-          "margin_top": 0,
-          "margin_bottom": 0
-        }
-      },
-      "161346609112cd0f90": {
-        "type": "video",
-        "disabled": true,
-        "settings": {
-          "heading": "Video",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
-          "light_bg": true,
-          "heading_size": "h2",
-          "subheading_size": "",
-          "heading_alignment": "text-center",
-          "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-          "ratio": "ratio-16x9",
-          "max_width": "",
-          "youtube_start": "",
-          "youtube_controls": true,
-          "youtube_privacy": true,
-          "padding_top": 7,
-          "padding_bottom": 8,
-          "margin_top": 0,
-          "margin_bottom": 7
-        }
-      },
-      "16134715004dcac0f0": {
-        "type": "html",
-        "disabled": true,
-        "settings": {
-          "html": "<p class=\"alert alert-info\">Hello world!<\/p>",
-          "heading": "HTML",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
-          "container": true,
-          "light_bg": false,
-          "heading_size": "h2",
-          "subheading_size": "",
-          "heading_alignment": "text-center",
-          "padding_top": 0,
-          "padding_bottom": 0,
-          "margin_top": 0,
-          "margin_bottom": 7
         }
       },
       "blog-template": {
@@ -682,51 +370,6 @@
           "back_to_btn_size": ""
         }
       },
-      "16136560969da8aed2": {
-        "type": "blog-posts",
-        "disabled": true,
-        "settings": {
-          "blog": "news",
-          "limit": 4,
-          "heading": "Blog posts",
-          "subheading": "<p>Write something catchy for this section.<\/p>",
-          "container": true,
-          "light_bg": false,
-          "heading_size": "h2",
-          "heading_alignment": "text-center",
-          "subheading_size": "",
-          "show_view_all_btn": true,
-          "view_all_btn_color": "btn-secondary",
-          "view_all_btn_size": "",
-          "article_heading_size": "h6",
-          "show_author": true,
-          "show_date": true,
-          "img_width": "480",
-          "img_height": "480",
-          "img_thumbnail": true,
-          "show_excerpt": true,
-          "excerpt_length": "240",
-          "show_posted_in": true,
-          "show_readmore": true,
-          "show_comments": true,
-          "readmore_btn_color": "btn-outline-primary",
-          "readmore_btn_size": "btn-sm",
-          "show_social_sharing": false,
-          "row_": 1,
-          "row_sm": 2,
-          "row_md": 2,
-          "row_lg": 4,
-          "row_xl": 4,
-          "row_xxl": 4,
-          "gutter_mobile": 3,
-          "gutter_tablet": 4,
-          "gutter_desktop": 6,
-          "padding_top": 0,
-          "padding_bottom": 0,
-          "margin_top": 0,
-          "margin_bottom": 7
-        }
-      },
       "161368561105e641b5": {
         "type": "faq",
         "blocks": {
@@ -771,6 +414,13 @@
               "title": "How can I get a refund for my order?",
               "description": "<p>If for any reason you are not completely satisfied with your purchase, within 30 days of placing your order, we will refund you for your purchase with no questions asked.<\/p>"
             }
+          },
+          "c838f615-cb90-4745-be00-4166b4258188": {
+            "type": "text",
+            "settings": {
+              "title": "How do I take care of my Tattoo?",
+              "description": "<p>1. Wash your hands any time you're going to touch your tattoo.<\/p><p>2. Gently Remove the bandage from your Tattoo after 1-4 hours.<\/p><p>3. Cleanse the area with after care soap and lukewarm water.<\/p><p>4. Pat the tattoo dry with a clean towel. Let the tattoo dry completely.<\/p><p>5. Lightly work a think layer of aftercare ointment or lotion over the tattoo.<\/p><p>6. Repeat the process 3-5 times a day for 2 weeks.<\/p><p><\/p><p>As it heals except peeling and itching much like a sun burn. Only use products formulated for tattoo healing.<\/p><p>- Avoid Direct Sunlight.<\/p><p>- Avoid baths, ocean, pools, and hot tubs.<\/p><p>- Do not pick scabs! Your Tattoo will be dry and peely as it heals, do not scratch your tattoo. Lotion will relive the itch.<\/p><p><\/p><p>The first night before bed, you can re-bandage your tattoo with plastic wrap.<\/p><p><\/p><p>Total healing time will be about two weeks. Continuing with a plain, uncented, water-based hand lotion, will keep your tattoo looking brighter longer. After healing is completed, you should use sunblock on your tattoo when outdoors.<\/p>"
+            }
           }
         },
         "block_order": [
@@ -779,7 +429,8 @@
           "161368561105e641b5-2",
           "161368561105e641b5-3",
           "161368561105e641b5-4",
-          "161368561105e641b5-5"
+          "161368561105e641b5-5",
+          "c838f615-cb90-4745-be00-4166b4258188"
         ],
         "settings": {
           "heading": "F.A.Q",
@@ -804,7 +455,7 @@
           "52745683-6531-4b24-b8e5-515edf3d8627": {
             "type": "image",
             "settings": {
-              "footer_img": "shopify:\/\/shop_images\/logo_deafink_solid.png"
+              "footer_img": "shopify:\/\/shop_images\/Deafink_Outlined.png"
             }
           },
           "b48e216c-724c-4c80-bc75-f7380eb5756f": {
@@ -879,16 +530,6 @@
           "padding_bottom": 4,
           "margin_top": 0,
           "margin_bottom": 0
-        }
-      },
-      "1613737250d2b7859f": {
-        "type": "separator",
-        "disabled": true,
-        "settings": {
-          "container": true,
-          "bg_color": "#21eaf4",
-          "margin_top": 9,
-          "margin_bottom": 7
         }
       },
       "collection-template": {
@@ -1090,7 +731,7 @@
         "type": "meet-artist",
         "settings": {
           "heading": "Meet The Artist",
-          "subheading": "<p>Welcome to my website, my name is Iguanaz. All I do is inks, sculpt, design, weld, paint and much more!<\/p>",
+          "subheading": "<p>Welcome to my website, my name is Gayle Sanchez (Iguanaz). All I do is inks, sculpt, design, weld, paint and much more!<\/p>",
           "light_bg": true,
           "heading_size": "h2",
           "heading_alignment": "text-start",
@@ -1137,20 +778,7 @@
       "161281990869fdf1c2",
       "162329471335fe9c81",
       "16131300457e5a9b91",
-      "16129467980997b2cd",
-      "16130473820c97e316",
-      "1612951102935a69c3",
-      "1613034094b1e14cbd",
-      "161313402064cf991c",
-      "1613036565184adb1d",
-      "161346609112cd0f90",
-      "161368561105e641b5",
-      "1613321883059203ae",
-      "16136560969da8aed2",
-      "1613737250d2b7859f",
-      "16131223138a584ff0",
-      "1613465098c76677b8",
-      "16134715004dcac0f0"
+      "161368561105e641b5"
     ]
   },
   "presets": {

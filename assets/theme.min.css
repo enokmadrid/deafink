@@ -6131,6 +6131,21 @@ textarea.form-control-lg {
   clear: both;
   content: "";
 }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .carousel-inner {
+    height: 660px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carousel-inner {
+    height: 600px;
+  }
+}
+@media (max-width: 767.98px) {
+  .carousel-inner {
+    height: 500px;
+  }
+}
 
 .carousel-item {
   position: relative;
@@ -6144,6 +6159,24 @@ textarea.form-control-lg {
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
     transition: none;
+  }
+}
+@media (max-width: 767.98px) {
+  .carousel-item .h1 {
+    font-size: calc(2.25rem + 5.5vw);
+  }
+}
+@media (max-width: 575.98px) {
+  .carousel-item .h1 {
+    font-size: calc(2.25rem + 2.5vw);
+  }
+  .carousel-item h3::after, .carousel-item .h3::after {
+    top: 40px !important;
+    width: 80px !important;
+  }
+  .carousel-item .btn, .carousel-item .shopify-payment-button .shopify-payment-button__button, .shopify-payment-button .carousel-item .shopify-payment-button__button {
+    width: 100%;
+    margin-bottom: 12px;
   }
 }
 
@@ -16568,12 +16601,22 @@ a:hover {
   color: white;
 }
 
+@media (max-width: 991.98px) {
+  .bg-transparent, .navbar > .container {
+    background: black !important;
+  }
+}
 .navbar-dark .navbar-nav .nav-link {
   text-transform: uppercase;
   font: bold 0.75rem "Proxima Nova";
   padding: 0 1.25rem;
   color: white;
   letter-spacing: 1.3px;
+}
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-nav .nav-link {
+    padding: 16px 24px;
+  }
 }
 .navbar-dark .navbar-nav .nav-link.active::after {
   content: url("underline.svg");
@@ -16583,6 +16626,11 @@ a:hover {
   height: 0;
   width: 28px;
   position: relative;
+}
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-nav .nav-link.active::after {
+    display: none;
+  }
 }
 
 /* 

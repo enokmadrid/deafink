@@ -34,12 +34,23 @@
     color: white;
 }
 
+@include media-breakpoint-down(lg) {
+    .bg-transparent, .navbar > .container {
+        background: black !important;
+    }
+}
+
 .navbar-dark .navbar-nav .nav-link {
     text-transform: uppercase;
     font: bold 0.75rem 'Proxima Nova'; //12px
     padding: 0 1.25rem;
     color: white;
     letter-spacing: 1.3px;
+
+    @include media-breakpoint-down(lg) {
+        padding: 16px 24px;
+    }
+
     &.active::after {
         content: url('underline.svg');
         display: block;
@@ -48,5 +59,8 @@
         height: 0;
         width: 28px;
         position: relative;
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
     }
 }
