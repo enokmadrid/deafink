@@ -5,6 +5,15 @@
     }
 }
 
+.navbar-brand {
+    @include media-breakpoint-only(md) {
+        width: 16%;
+    }  
+    @include media-breakpoint-down(md) {
+        width: 20%;
+    }  
+}
+
 .custom-logo {
     position: absolute;
     width: 113px;
@@ -13,6 +22,12 @@
     padding: 10px;
     clip-path: url(#clip-path-logo-base);
     background: black;
+    @include media-breakpoint-only(md) {
+        padding: 10px 24px 0;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 10px 32px 0;
+    }  
 }
 
 .bg-transparent {
