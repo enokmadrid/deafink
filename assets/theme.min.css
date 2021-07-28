@@ -16718,6 +16718,14 @@ a:hover {
 .gallery .gallery-item-inner.rounded:after {
   border-radius: 0.25rem;
 }
+.gallery .gallery-item-inner .gallery-item-img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+.gallery .gallery-item:hover .gallery-item-img {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
 
 .gallery.overlay-light.overlay-opacity-25 .gallery-item-inner:after {
   background: rgba(255, 255, 255, 0.25);

@@ -24,6 +24,14 @@
         &.rounded:after {
             border-radius: $border-radius;
         }
+        .gallery-item-img {
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+        }
+    }
+    .gallery-item:hover .gallery-item-img {
+        filter: none;
+        -webkit-filter: grayscale(0%);
     }
 }
 

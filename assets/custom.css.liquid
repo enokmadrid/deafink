@@ -1,3 +1,19 @@
 /* 
     Put here your own custom CSS/Liquid styles
 */
+
+/* Gallery Images */
+.enrm-img-wrapper {
+    border-radius: 8px !important;
+}
+
+.enrm-masonry-img > img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.enrm-masonry-img:focus > img,
+.enrm-masonry-img:hover > img {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
